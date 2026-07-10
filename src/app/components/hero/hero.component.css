@@ -1,0 +1,88 @@
+.hero {
+  padding-top: 172px;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+  padding-bottom: 96px;
+}
+
+.hero__titulo {
+  font-size: clamp(34px, 4.6vw, 56px);
+  margin-bottom: 24px;
+}
+
+.hero__titulo em {
+  font-size: 1.02em;
+}
+
+.hero__resumo {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--ink-mute);
+  max-width: 46ch;
+  margin-bottom: 40px;
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+/* ---- Foto com moldura deslocada ---- */
+.hero__photo-wrap {
+  position: relative;
+  padding: 0 0 28px 28px;
+}
+
+.hero__frame {
+  position: absolute;
+  inset: 28px 0 0 0;
+  background: var(--paper);
+  z-index: 0;
+}
+
+.hero__photo {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  transform: translate(-28px, 28px);
+}
+
+.hero__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(1) contrast(1.05) brightness(0.98);
+}
+
+.hero__photo figcaption {
+  margin-top: 14px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-mute);
+}
+
+@media (max-width: 860px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .hero {
+    padding-top: 128px;
+  }
+  .hero__photo-wrap {
+    max-width: 380px;
+  }
+}

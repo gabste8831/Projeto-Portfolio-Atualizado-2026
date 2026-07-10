@@ -1,0 +1,15 @@
+<section id="sobre" class="secao--clara sobre">
+  <div class="container sobre__grid">
+    <div appReveal>
+      <span class="rotulo">Objetivo</span>
+      <p class="paragrafo-lead">{{ objetivo }}</p>
+    </div>
+
+    <dl class="sobre__fatos" appReveal>
+      <div class="sobre__fato" *ngFor="let fato of fatos">
+        <dt>{{ fato.rotulo }}</dt>
+        <dd>{{ fato.valor }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>

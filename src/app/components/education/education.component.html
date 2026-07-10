@@ -1,0 +1,29 @@
+<section id="formacao" class="secao--escura formacao">
+  <div class="container formacao__grid">
+    <div appReveal>
+      <span class="rotulo">Formação</span>
+      <h2 class="titulo-secao">Base acadêmica &amp; aprendizado contínuo</h2>
+
+      <ul class="formacao__lista">
+        <li class="formacao__item" *ngFor="let item of formacao">
+          <h3>{{ item.titulo }}</h3>
+          <p>{{ item.instituicao }}</p>
+          <p class="texto-secundario">{{ item.periodo }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <div appReveal>
+      <span class="rotulo">Cursos &amp; certificações</span>
+      <ul class="cursos__lista">
+        <li class="cursos__item" *ngFor="let curso of cursos">
+          <div class="cursos__cabecalho">
+            <h3>{{ curso.titulo }}</h3>
+            <span>{{ curso.periodo }}</span>
+          </div>
+          <p>{{ curso.instituicao }} — {{ curso.descricao }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+<section id="experiencia" class="secao--escura experiencia">
+  <div class="container">
+    <span class="rotulo" appReveal>Trajetória</span>
+    <h2 class="titulo-secao" appReveal>Experiência profissional</h2>
+
+    <ol class="experiencia__lista">
+      <li
+        class="experiencia__item"
+        *ngFor="let exp of experiencias"
+        [class.experiencia__item--atual]="exp.atual"
+        appReveal
+      >
+        <div class="experiencia__cabecalho">
+          <div>
+            <h3 class="experiencia__cargo">{{ exp.cargo }}</h3>
+            <p class="experiencia__empresa">{{ exp.empresa }}</p>
+          </div>
+          <p class="experiencia__periodo">
+            {{ exp.periodo }}
+            <span class="experiencia__badge" *ngIf="exp.atual">atual</span>
+          </p>
+        </div>
+
+        <ul class="experiencia__stack">
+          <li *ngFor="let tecnologia of exp.stack">{{ tecnologia }}</li>
+        </ul>
+
+        <ul class="experiencia__destaques">
+          <li *ngFor="let destaque of exp.destaques">{{ destaque }}</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>

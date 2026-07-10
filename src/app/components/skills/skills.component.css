@@ -1,0 +1,95 @@
+.skills__grupos {
+  margin-top: 48px;
+  display: grid;
+  gap: 40px;
+}
+
+.skills__grupo {
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.skills__grupo:last-child {
+  border-bottom: none;
+}
+
+.skills__categoria {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
+  margin-bottom: 22px;
+}
+
+.logotipos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 32px;
+}
+
+.logotipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 84px;
+  text-align: center;
+}
+
+.logotipo__glifo {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: border-color 0.25s var(--ease-standard), color 0.25s var(--ease-standard);
+}
+
+.logotipo:hover .logotipo__glifo {
+  border-color: var(--ink);
+}
+
+.logotipo__nome {
+  font-size: 10px;
+  color: var(--ink-mute);
+  line-height: 1.3;
+}
+
+.skills__soft {
+  margin-top: 8px;
+  padding-top: 40px;
+}
+
+.skills__soft-itens {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 40px;
+}
+
+.skills__soft-itens li {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink-soft);
+  padding-left: 18px;
+  position: relative;
+}
+
+.skills__soft-itens li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: 0.4;
+}
+
+@media (max-width: 560px) {
+  .skills__soft-itens { grid-template-columns: 1fr; }
+}

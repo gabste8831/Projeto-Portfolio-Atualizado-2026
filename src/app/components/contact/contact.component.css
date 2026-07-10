@@ -1,0 +1,46 @@
+.contato__conteudo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contato__titulo {
+  font-size: clamp(30px, 4.6vw, 48px);
+  max-width: 17ch;
+  margin-bottom: 22px;
+  font-weight: 300;
+}
+
+.contato__texto {
+  margin-bottom: 44px;
+  color: var(--ink-soft);
+}
+
+.contato__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.contato__redes {
+  display: flex;
+  gap: 28px;
+}
+
+.contato__redes a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s var(--ease-standard), border-color 0.2s var(--ease-standard);
+}
+
+.contato__redes a:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}

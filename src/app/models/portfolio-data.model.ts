@@ -16,7 +16,7 @@ export interface PerfilPessoal {
   telefone: string;
   linkedin: string;
   github: string;
-  resumo: string;
+  resumo: string[];
 }
 
 export interface ExperienciaProfissional {

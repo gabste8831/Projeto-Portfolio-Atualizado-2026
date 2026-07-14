@@ -18,8 +18,8 @@ export class AboutComponent {
   readonly perfil = PERFIL;
 
   readonly objetivo =
-    'Atuar como Desenvolvedor Full Stack, aplicando princípios de engenharia de software na criação ' +
-    'de soluções ponta a ponta — de interfaces à estruturação de hospedagem. Busco alinhar a parte ' +
+    'Atuar como desenvolvedor full Stack, aplicando princípios de engenharia de software na criação ' +
+    'de soluções, desde interfaces à estruturas de hospedagem. Busco alinhar a parte ' +
     'técnica à visão estratégica de negócio, mirando, a longo prazo, a coordenação técnica.';
 
   readonly fatos = [

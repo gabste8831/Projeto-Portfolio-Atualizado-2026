@@ -18,7 +18,7 @@
   --line-on-ink: #3a3833;
 
   /* Tipografia */
-  --font-serif: 'DM Serif Display', 'Times New Roman', serif;
+  --font-serif: 'Times New Roman', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 
   /* Layout */
@@ -36,7 +36,10 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
+
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -70,7 +73,10 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-sans);
   font-weight: 400;
   margin: 0;
@@ -78,12 +84,13 @@ h1, h2, h3, h4 {
   line-height: 1.08;
 }
 
-/* Palavra(s) de destaque em serifa itálica — usar com moderação, no máximo
+/* Palavra(s) de destaque em serifa — usar com moderação, no máximo
    uma expressão por título */
-em, .destaque {
+em,
+.destaque {
   font-family: var(--font-serif);
-  font-style: italic;
   font-weight: 400;
+  font-style: normal;
 }
 
 p {
@@ -117,7 +124,9 @@ section {
 }
 
 @media (max-width: 640px) {
-  section { padding: 76px 0; }
+  section {
+    padding: 76px 0;
+  }
 }
 
 /* Seções alternam papel claro / tinta escura — sempre em tons neutros */
@@ -127,15 +136,19 @@ section {
 }
 
 .secao--clara .texto-secundario,
-.secao--clara p { color: var(--ink-soft); }
+.secao--clara p {
+  color: var(--ink-soft);
+}
 
 .secao--escura .texto-secundario,
-.secao--escura p { color: var(--ink-mute); }
+.secao--escura p {
+  color: var(--ink-mute);
+}
 
 .rotulo {
   font-family: var(--font-sans);
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: inherit;
@@ -170,7 +183,7 @@ section {
   letter-spacing: 0.1em;
   padding: 15px 30px;
   border: 1px solid currentColor;
-  transition: background 0.3s var(--ease-standard), color 0.3s var(--ease-standard);
+  transition: all 0.3s ease-in-out;
 }
 
 .botao--primario {
@@ -207,7 +220,9 @@ section {
   border-bottom: 1px solid var(--line);
 }
 
-.secao--clara .botao--link { border-color: var(--line); }
+.secao--clara .botao--link {
+  border-color: var(--line);
+}
 
 .botao--link:hover {
   opacity: 0.6;

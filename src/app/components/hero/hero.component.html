@@ -1,15 +1,16 @@
 <header id="topo" class="hero">
   <div class="container hero__grid">
     <div class="hero__copy" appReveal>
-      <span class="rotulo">Rio do Sul, SC — {{ perfil.idade }} anos</span>
+      <span class="rotulo">Rio do Sul, SC - {{ perfil.idade }} anos</span>
       <h1 class="hero__titulo">
-        Desenvolvedor <em>Full&nbsp;Stack</em>,<br />
-        com raiz em dados.
+        Desenvolvedor<br><em>de Software</em>
       </h1>
-      <p class="hero__resumo">{{ perfil.resumo }}</p>
+      @for (paragrafo of perfil.resumo; track paragrafo) {
+      <p class="hero__resumo">{{ paragrafo }}</p>
+      }
 
       <div class="hero__cta">
-        <a class="botao botao--primario" href="mailto:{{ perfil.email }}">Falar comigo</a>
+        <a class="botao botao--primario" href="#contato">Falar comigo</a>
         <a class="botao botao--link" [href]="perfil.github" target="_blank" rel="noopener">GitHub</a>
         <a class="botao botao--link" [href]="perfil.linkedin" target="_blank" rel="noopener">LinkedIn</a>
       </div>
@@ -18,8 +19,8 @@
     <div class="hero__photo-wrap" appReveal>
       <div class="hero__frame"></div>
       <figure class="hero__photo">
-        <img src="/gabriel.jpg" alt="Foto de {{ perfil.nome }}" width="1080" height="1080" />
-        <figcaption>{{ perfil.nome }} — {{ perfil.cargoObjetivo }}</figcaption>
+        <img src="/gabriel.jpg" alt="Foto de {{ perfil.nome }}" width="1000" height="400" />
+        <figcaption>{{ perfil.nome }}</figcaption>
       </figure>
     </div>
   </div>

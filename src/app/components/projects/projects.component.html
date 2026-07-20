@@ -1,0 +1,39 @@
+<section id="projetos" class="secao--escura projetos">
+  <div class="container">
+    <span class="rotulo" appReveal>Trabalhos</span>
+    <h2 class="titulo-secao" appReveal>Projetos em <em>destaque</em></h2>
+
+    <div class="projetos_grid" appReveal>
+      <article class="projeto_card" *ngFor="let projeto of projetos">
+        <div class="projeto_conteudo">
+          <h3 class="projeto_titulo">{{ projeto.titulo }}</h3>
+          <p class="projeto_descricao">{{ projeto.descricao }}</p>
+
+          <ul class="projeto_tags">
+            <li class="projeto_tag" *ngFor="let tech of projeto.tecnologias">{{ tech }}</li>
+          </ul>
+        </div>
+
+        <div class="projeto_acoes">
+          <a class="botao botao--fantasma projeto_botao" [href]="projeto.repoUrl" target="_blank" rel="noopener">
+            Código
+          </a>
+          <a class="botao botao--link projeto_botao" *ngIf="projeto.deployUrl" [href]="projeto.deployUrl"
+            target="_blank" rel="noopener">
+            Ver ao vivo
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="projetos_rodape" appReveal>
+      <p class="texto-secundario projetos_nota">
+        Estes são alguns dos projetos que já estão em produção/deploy. Além deles, tenho diversos outros
+        repositórios no GitHub - projetos acadêmicos, estudos e experimentos.
+      </p>
+      <a class="botao botao--primario" [href]="perfil.github" target="_blank" rel="noopener">
+        Ver todos os repositórios
+      </a>
+    </div>
+  </div>
+</section>

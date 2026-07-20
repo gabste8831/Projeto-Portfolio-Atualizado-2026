@@ -23,6 +23,7 @@ export class NavbarComponent {
     { rotulo: 'Sobre', href: '#sobre' },
     { rotulo: 'Experiência', href: '#experiencia' },
     { rotulo: 'Skills', href: '#skills' },
+    { rotulo: 'Projetos', href: '#projetos' },
     { rotulo: 'Formação', href: '#formacao' },
     { rotulo: 'Contato', href: '#contato' },
   ];

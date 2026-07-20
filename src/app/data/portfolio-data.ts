@@ -14,6 +14,7 @@ import {
   GrupoDeHabilidades,
   ItemFormacao,
   PerfilPessoal,
+  ProjetoPortfolio,
 } from '../models/portfolio-data.model';
 
 export const PERFIL: PerfilPessoal = {
@@ -69,6 +70,34 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
       'Experiência prática em múltiplas áreas relacionadas ao fluxo de trabalho de um e-commerce.',
     ],
     atual: false,
+  },
+];
+
+/**
+ * Projetos em destaque (com deploy) exibidos na seção "Projetos".
+ * ATENÇÃO Gabriel: os 3 itens abaixo são placeholders de exemplo - troque
+ * título, descrição, tecnologias e URLs pelos seus projetos reais.
+ */
+export const PROJETOS: ProjetoPortfolio[] = [
+  {
+    titulo: 'Dashboard financeiro',
+    descricao: 'Aplicação para controle de gastos pessoais com gráficos e categorização automática.',
+    tecnologias: ['Angular', 'Node.js', 'PostgreSQL'],
+    repoUrl: `${PERFIL.github}/dashboard-financeiro`,
+    deployUrl: 'https://dashboard-financeiro.vercel.app',
+  },
+  {
+    titulo: 'API de gestão de tarefas',
+    descricao: 'REST API com autenticação JWT, testes automatizados e documentação via Swagger.',
+    tecnologias: ['Express', 'MongoDB', 'JWT'],
+    repoUrl: `${PERFIL.github}/api-tarefas`,
+  },
+  {
+    titulo: 'Loja virtual',
+    descricao: 'E-commerce completo com carrinho, checkout e painel administrativo.',
+    tecnologias: ['Vue.js', 'PHP', 'MySQL'],
+    repoUrl: `${PERFIL.github}/loja-virtual`,
+    deployUrl: 'https://loja-virtual-demo.vercel.app',
   },
 ];
 

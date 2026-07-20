@@ -54,3 +54,14 @@ export interface NoPipeline {
   x: number;
   y: number;
 }
+
+/** Projeto em destaque na seção "Projetos" (repositórios com deploy) */
+export interface ProjetoPortfolio {
+  titulo: string;
+  descricao: string;
+  tecnologias: string[];
+  /** URL do repositório no GitHub */
+  repoUrl: string;
+  /** URL da aplicação publicada; omitir quando não houver deploy público */
+  deployUrl?: string;
+}

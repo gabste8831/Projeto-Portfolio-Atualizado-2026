@@ -24,7 +24,8 @@ export const PERFIL: PerfilPessoal = {
   idade: 22,
   email: 'gabrielsteffens2003@gmail.com',
   telefone: '(47) 9 8831-3652',
-  linkedin: 'https://www.linkedin.com/in/gabriel-steffens',
+  linktelefone: 'https://wa.me/5547988313652',
+  linkedin: 'https://www.linkedin.com/in/gabriel-steffens-/',
   github: 'https://github.com/gabste8831',
   resumo: [
     `Prazer, Gabriel Steffens!`,

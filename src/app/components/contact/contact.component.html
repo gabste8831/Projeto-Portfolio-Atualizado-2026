@@ -1,18 +1,45 @@
-<section id="contato" class="secao--clara contato">
-  <div class="container contato_conteudo" appReveal>
-    <h2 class="contato_titulo">Vamos construir o próximo <em>capítulo</em>, juntos.</h2>
-    <p class="paragrafo-lead contato_texto">
-      Aberto a oportunidades como desenvolvedor Full Stack - de APIs e ETL a interfaces e infraestrutura.
-    </p>
-
-    <div class="contato_links">
-      <a class="botao botao--primario" href="mailto:{{ perfil.email }}">{{ perfil.email }}</a>
-      <a class="botao botao--link" href="tel:{{ perfil.telefone }}">{{ perfil.telefone }}</a>
+<section id="contato" class="secao--escura contato">
+  <div class="container">
+    <div class="contato_intro" appReveal>
+      <span class="rotulo">Contato</span>
+      <h2 class="contato_titulo">Vamos conversar sobre o próximo <br/><em>passo</em>.</h2>
+      <p class="paragrafo-lead contato_texto">
+        Sites, sistemas, soluções em geral <br/> Aberto tanto a projetos freelance quanto a oportunidades profissionais.
+      </p>
     </div>
 
-    <div class="contato_redes">
-      <a [href]="perfil.linkedin" target="_blank" rel="noopener">LinkedIn</a>
-      <a [href]="perfil.github" target="_blank" rel="noopener">GitHub</a>
+    <div class="contato_caminhos">
+      <div class="contato_caminho" appReveal>
+        <span class="contato_caminho-numero">01</span>
+        <h3 class="contato_caminho-titulo">Projeto freelance</h3>
+        <p class="contato_caminho-texto">
+          Tem uma ideia, um MVP ou um sistema pra construir? Vamos juntos tirar essa ideia do papel. Vamos conversar sobre o escopo, prazos e orçamento.
+        </p>
+        <a class="botao botao--primario" [href]="mailtoComAssunto('Projeto freelance')">
+          Falar sobre um projeto
+        </a>
+      </div>
+
+      <div class="contato_divisor" aria-hidden="true"></div>
+
+      <div class="contato_caminho" appReveal>
+        <span class="contato_caminho-numero">02</span>
+        <h3 class="contato_caminho-titulo">Oportunidade profissional</h3>
+        <p class="contato_caminho-texto">
+          Aberto a oportunidades em Desenvolvimento / Engenharia de Software, e DevOps. Disponível para modelos CLT, PJ ou contrato (Remoto ou presencial em SC)."
+        </p>
+        <a class="botao botao--primario" [href]="mailtoComAssunto('Oportunidade profissional')">
+          Enviar uma oportunidade
+        </a>
+      </div>
+    </div>
+
+    <div class="contato_rodape" appReveal>
+      <a class="botao botao--link" href="tel:{{ perfil.telefone }}">{{ perfil.telefone }}</a>
+      <div class="contato_redes">
+        <a [href]="perfil.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a [href]="perfil.github" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </div>
 </section>

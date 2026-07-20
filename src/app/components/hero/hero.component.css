@@ -86,7 +86,7 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(1) contrast(1.05) brightness(0.98);
+  /* filter: grayscale(1) contrast(1.05) brightness(0.98); */
 }
 
 .hero_photo figcaption {

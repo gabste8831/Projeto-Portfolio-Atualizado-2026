@@ -19,9 +19,17 @@
 
           <p class="experiencia_stack">{{ exp.stack.join(' · ') }}</p>
 
-          <ul class="experiencia_destaques">
-            <li *ngFor="let destaque of exp.destaques">{{ destaque }}</li>
-          </ul>
+          <!-- Wrapper invisível que cuida da animação de abrir/fechar -->
+          <div class="experiencia_destaques-wrapper" [class.is-open]="indiceExpandido() === i">
+            <ul class="experiencia_destaques">
+              <li *ngFor="let destaque of exp.destaques">{{ destaque }}</li>
+            </ul>
+          </div>
+
+          <!-- Botão Dinâmico -->
+          <button type="button" class="experiencia_toggle" (click)="toggleDetalhes(i)">
+            {{ indiceExpandido() === i ? 'Ocultar' : 'Ler mais' }}
+          </button>
 
         </div>
       </li>

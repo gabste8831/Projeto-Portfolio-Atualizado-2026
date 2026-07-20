@@ -36,7 +36,7 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
   {
     cargo: 'Desenvolvedor Back-End - Migração de Dados',
     empresa: 'Apresenta.me - Sistema para Gestão Imobiliária',
-    periodo: 'Jan 2026 - Atual',
+    periodo: 'Jan 2026 - Hoje',
     stack: ['JavaScript', 'Node.js', 'PHP', 'MongoDB', 'PostgreSQL', 'IA aplicada ao dev'],
     destaques: [
       'Execução de scripts de migração de grandes volumes de dados (CRMs e sistemas financeiros), recebidos em XML, JSON, CSV e backups SQL/PostgreSQL.',

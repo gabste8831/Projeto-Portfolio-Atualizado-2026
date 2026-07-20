@@ -3,22 +3,55 @@
     <span class="rotulo" appReveal>Caixa de ferramentas</span>
     <h2 class="titulo-secao" appReveal>Skills &amp; <em>stack</em></h2>
 
-    <div class="skills_grupos">
-      <div class="skills_grupo" *ngFor="let grupo of grupos" appReveal>
-        <h3 class="skills_categoria">{{ grupo.categoria }}</h3>
-        <div class="logotipos">
-          <div class="logotipo" *ngFor="let item of grupo.itens">
-            <span class="logotipo_glifo">
-              <img *ngIf="temIcone(item)" [src]="iconeUrl(item)" [alt]="item" class="logotipo_icone" loading="lazy"
-                (error)="aoErrarIcone(item)" />
-              <span class="logotipo_monograma" *ngIf="!temIcone(item)">{{ sigla(item) }}</span>
-            </span>
-            <span class="logotipo_nome">{{ item }}</span>
+    <div class="skills_carrossel" appReveal>
+
+      <!-- 1. CONTAINER DA INTERFACE (Segura as setas e a janela central) -->
+      <div class="skills_carrossel-interface">
+        <button type="button" class="skills_seta skills_seta--esquerda" (click)="anterior()"
+          aria-label="Categoria anterior">‹</button>
+
+        <!-- 2. VIEWPORT (Janela estática que mascara o conteúdo excedente) -->
+        <div class="skills_viewport">
+
+          <!-- 3. TRILHO (A esteira móvel que realmente desliza horizontalmente) -->
+          <div class="skills_trilho" [style.transform]="'translateX(-' + (indiceAtivo() * 100) + '%)'">
+
+            <!-- Cada slide agora encapsula o Título + Seus respectivos Logotipos -->
+            <div class="skills_slide" *ngFor="let grupo of grupos">
+
+              <!-- O título agora faz parte do slide e desliza junto com os blocos -->
+              <h3 class="skills_categoria">{{ grupo.categoria }}</h3>
+
+              <div class="logotipos">
+                <div class="logotipo" *ngFor="let item of grupo.itens">
+                  <span class="logotipo_glifo">
+                    <img *ngIf="temIcone(item)" [src]="iconeUrl(item)" [alt]="item" class="logotipo_icone"
+                      loading="lazy" (error)="aoErrarIcone(item)" />
+                    <span class="logotipo_monograma" *ngIf="!temIcone(item)">{{ sigla(item) }}</span>
+                  </span>
+                  <span class="logotipo_nome">{{ item }}</span>
+                </div>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
+        <button type="button" class="skills_seta skills_seta--direita" (click)="proximo()"
+          aria-label="Próxima categoria">›</button>
+      </div>
+
+      <!-- Pontos de progresso inferiores (mantidos para navegação discreta) -->
+      <div class="skills_pontos">
+        <button type="button" class="skills_ponto" *ngFor="let grupo of grupos; let i = index"
+          [class.skills_ponto--ativo]="i === indiceAtivo()" (click)="irPara(i)"
+          [attr.aria-label]="'Ir para ' + grupo.categoria"></button>
       </div>
     </div>
 
+    <!-- Soft skills (Sem alterações) -->
     <div class="skills_soft" appReveal>
       <h3 class="skills_categoria">Engenharia &amp; gestão</h3>
       <ul class="skills_soft-itens">

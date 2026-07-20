@@ -1,31 +1,59 @@
-.skills_grupos {
+.skills_carrossel {
   margin-top: 48px;
-  display: grid;
-  gap: 40px;
 }
 
-.skills_grupo {
-  padding-bottom: 36px;
-  border-bottom: 1px solid var(--line);
+/* ---- Interface Flexível Externa ---- */
+.skills_carrossel-interface {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
 }
 
-.skills_grupo:last-child {
-  border-bottom: none;
+/* ---- Viewport: a máscara estática ---- */
+.skills_viewport {
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
 }
 
-.skills_categoria {
+/* ---- Trilho: a esteira móvel ---- */
+.skills_trilho {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s var(--ease-standard);
+  will-change: transform;
+}
+
+/* ---- Slide individual ---- */
+.skills_slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Estilo do título da categoria dentro do slide */
+.skills_slide .skills_categoria {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--ink-mute);
-  margin-bottom: 22px;
+  margin: 0 0 24px 16px;
+  /* Alinhamento inicial de 16px para desktop */
 }
 
+/* Grid interno de logos */
 .logotipos {
   display: flex;
   flex-wrap: wrap;
   gap: 28px 32px;
+  width: 100%;
 }
 
 .logotipo {
@@ -48,7 +76,7 @@
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: all 0.3s var(--ease-standard);
+  transition: 0.3s all;
 }
 
 .logotipo:hover .logotipo_glifo {
@@ -84,9 +112,66 @@
   line-height: 1.3;
 }
 
+/* ---- Setas ---- */
+.skills_seta {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  background: none;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+  transition: border-color 0.25s var(--ease-standard), opacity 0.25s var(--ease-standard);
+  border-radius: 100%;
+}
+
+.skills_seta:hover {
+  border-color: var(--ink);
+}
+
+/* ---- Pontos de progresso ---- */
+.skills_pontos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding-bottom: 20px;
+}
+
+.skills_ponto {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: var(--line);
+  cursor: pointer;
+  transition: background 0.25s var(--ease-standard), transform 0.25s var(--ease-standard);
+}
+
+.skills_ponto--ativo {
+  background: var(--ink);
+  transform: scale(1.3);
+}
+
+/* ---- Soft skills (Geral) ---- */
 .skills_soft {
-  margin-top: 8px;
+  margin-top: 56px;
   padding-top: 40px;
+}
+
+.skills_soft .skills_categoria {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
+  margin-bottom: 22px;
 }
 
 .skills_soft-itens {
@@ -112,6 +197,40 @@
   position: absolute;
   left: 0;
   opacity: 0.4;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE E ADAPTAÇÃO MOBILE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .skills_carrossel-interface {
+    gap: 0;
+  }
+
+  .skills_seta {
+    display: none;
+  }
+}
+
+/* NOVO: Ajuste proporcional cirúrgico para telas menores/mobile */
+@media (max-width: 600px) {
+
+  .logotypes,
+  .logotipos {
+    gap: 20px 16px;
+    /* Diminui drasticamente o espaçamento para os ícones se aproximarem */
+  }
+
+  .logotipo {
+    width: 76px;
+    /* Reduz a caixa para permitir mais colunas por linha no mobile */
+  }
+
+  .skills_slide .skills_categoria {
+    margin: 0 0 16px 12px;
+    /* Recalculo matemático para manter alinhado com o glifo menor */
+  }
 }
 
 @media (max-width: 560px) {

@@ -1,10 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { HABILIDADES, SOFT_SKILLS } from '../../data/portfolio-data';
 import { RevealDirective } from '../../shared/reveal.directive';
 
 /**
  * Seção "Skills".
+ *
+ * As categorias de tecnologia viram um carrossel (uma categoria visível por
+ * vez) em vez de uma lista empilhada — isso é o que resolve a altura da
+ * seção. O carrossel avança sozinho a cada 10s; qualquer navegação manual
+ * (seta ou aba) reinicia essa contagem, pra não "brigar" com o usuário.
  *
  * Cada tecnologia exibe seu logo oficial (via Simple Icons CDN, já com a
  * cor de marca), dentro do mesmo quadrado de linha fina usado no resto do
@@ -19,9 +24,56 @@ import { RevealDirective } from '../../shared/reveal.directive';
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css',
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit, OnDestroy {
   readonly grupos = HABILIDADES;
   readonly softSkills = SOFT_SKILLS;
+
+  /** Categoria atualmente visível no carrossel */
+  readonly indiceAtivo = signal(0);
+
+  private readonly intervaloMs = 10_000;
+  private timer?: ReturnType<typeof setInterval>;
+
+  ngOnInit(): void {
+    this.iniciarAutoAvanco();
+  }
+
+  ngOnDestroy(): void {
+    this.pararAutoAvanco();
+  }
+
+  proximo(): void {
+    this.indiceAtivo.update((i) => (i + 1) % this.grupos.length);
+    this.reiniciarAutoAvanco();
+  }
+
+  anterior(): void {
+    this.indiceAtivo.update((i) => (i - 1 + this.grupos.length) % this.grupos.length);
+    this.reiniciarAutoAvanco();
+  }
+
+  irPara(indice: number): void {
+    this.indiceAtivo.set(indice);
+    this.reiniciarAutoAvanco();
+  }
+
+  private iniciarAutoAvanco(): void {
+    this.timer = setInterval(() => {
+      this.indiceAtivo.update((i) => (i + 1) % this.grupos.length);
+    }, this.intervaloMs);
+  }
+
+  private pararAutoAvanco(): void {
+    if (this.timer) {
+      clearInterval(this.timer);
+    }
+  }
+
+  /** Chamado a cada interação manual, pra não avançar de novo logo em seguida */
+  private reiniciarAutoAvanco(): void {
+    this.pararAutoAvanco();
+    this.iniciarAutoAvanco();
+  }
 
   /** Monogramas curados para as tecnologias mais citadas; o restante cai no fallback */
   private readonly monogramas: Record<string, string> = {
@@ -47,7 +99,7 @@ export class SkillsComponent {
     'AWS (EC2, S3, RDS, IAM)': 'AWS',
     Docker: 'DK',
     Kubernetes: 'K8S',
-    'Noções de CI/CD': 'CI',
+    'noções de CI/CD': 'CI',
     'Git/GitHub': 'GIT',
     npm: 'NPM',
     Figma: 'FIG',

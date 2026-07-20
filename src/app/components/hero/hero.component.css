@@ -30,6 +30,7 @@
   margin-bottom: 16px;
 }
 
+/* ---- Alinhamento e Botões ---- */
 .hero_cta {
   display: flex;
   align-items: center;
@@ -42,17 +43,33 @@
   padding: 0;
 }
 
+/* Nova classe para integrar o currículo à fileira Premium */
+.hero_cta .botao--outline {
+  border: 1px solid var(--line-on-ink);
+  padding: 10px 22px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero_cta .botao--outline:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-color: var(--paper);
+  cursor: pointer;
+}
+
 /* ---- Foto com moldura deslocada ---- */
 .hero_photo-wrap {
   position: relative;
   padding: 0 28px 8px 0;
-  /* espaço para o frame aparecer à direita e em baixo */
 }
 
 .hero_frame {
   position: absolute;
   inset: 0;
-  /* frame cobre o wrap inteiro como fundo branco */
   background: var(--paper);
   z-index: 0;
 }
@@ -61,8 +78,6 @@
   position: relative;
   z-index: 1;
   margin: 0;
-  /* sem transform - a foto ocupa naturalmente o canto superior-esquerdo */
-  /* o frame aparece nos 28px à direita e 28px em baixo que a foto não cobre */
 }
 
 .hero_photo img {

@@ -5,12 +5,17 @@
       <h1 class="hero_titulo">
         Desenvolvedor<br><em>de Software</em>
       </h1>
+
       @for (paragrafo of perfil.resumo; track paragrafo) {
       <p class="hero_resumo">{{ paragrafo }}</p>
       }
 
+      <!-- Todos os botões integrados no mesmo ecossistema flex -->
       <div class="hero_cta">
-        <a class="botao botao--primario" href="#contato">Falar comigo</a>
+        <a class="botao botao--outline" href="assets/gabriel-steffens-curriculo.pdf"
+          download="Curriculo_Gabriel_Steffens.pdf">
+          Currículo (PDF)
+        </a>
         <a class="botao botao--link" [href]="perfil.github" target="_blank" rel="noopener">GitHub</a>
         <a class="botao botao--link" [href]="perfil.linkedin" target="_blank" rel="noopener">LinkedIn</a>
       </div>

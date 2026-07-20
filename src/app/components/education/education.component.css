@@ -64,26 +64,24 @@
   color: var(--ink-mute);
 }
 
-.contato_redes {
-  background-color: var(--ink-mute);
-  padding: 6px 14px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  width: max-content;
-  margin-top: 24px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.contato_redes:hover {
-  background-color: rgba(255, 255, 255, 0.192);
-  cursor: pointer;
-}
-
-.contato_redes a {
+.botao--outline {
+  border: 1px solid var(--line-on-ink);
+  padding: 10px 22px;
   font-size: 13px;
-  font-weight: 300;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  margin: 20px auto 0;
+  width: max-content;
+}
+
+.botao--outline:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-color: var(--paper);
+  cursor: pointer;
 }
 
 @media (max-width: 780px) {

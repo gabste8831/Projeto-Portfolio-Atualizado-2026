@@ -3,23 +3,23 @@
     <span class="rotulo" appReveal>Trajetória</span>
     <h2 class="titulo-secao" appReveal>Experiência profissional</h2>
 
-    <ol class="experiencia__lista">
-      <li class="experiencia__item" *ngFor="let exp of experiencias; let i = index"
-        [class.experiencia__item--atual]="exp.atual" [style.--i]="i" appReveal>
-        <div class="experiencia__periodo-col">
-          <p class="experiencia__periodo">{{ exp.periodo }}</p>
-          <span class="experiencia__badge" *ngIf="exp.atual">Atual</span>
+    <ol class="experiencia_lista">
+      <li class="experiencia_item" *ngFor="let exp of experiencias; let i = index"
+        [class.experiencia_item--atual]="exp.atual" [style.--i]="i" appReveal>
+        <div class="experiencia_periodo-col">
+          <p class="experiencia_periodo">{{ exp.periodo }}</p>
+          <span class="experiencia_badge" *ngIf="exp.atual">Atual</span>
         </div>
 
-        <div class="experiencia__conteudo">
-          <div class="experiencia__cabecalho">
-            <h3 class="experiencia__cargo">{{ exp.cargo }}</h3>
-            <p class="experiencia__empresa">{{ exp.empresa }}</p>
+        <div class="experiencia_conteudo">
+          <div class="experiencia_cabecalho">
+            <h3 class="experiencia_cargo">{{ exp.cargo }}</h3>
+            <p class="experiencia_empresa">{{ exp.empresa }}</p>
           </div>
 
-          <p class="experiencia__stack">{{ exp.stack.join(' · ') }}</p>
+          <p class="experiencia_stack">{{ exp.stack.join(' · ') }}</p>
 
-          <ul class="experiencia__destaques">
+          <ul class="experiencia_destaques">
             <li *ngFor="let destaque of exp.destaques">{{ destaque }}</li>
           </ul>
 

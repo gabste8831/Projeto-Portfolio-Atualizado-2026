@@ -1,15 +1,15 @@
-.experiencia__lista {
+.experiencia_lista {
   list-style: none;
   margin: 56px 0 0;
   padding: 0;
 }
 
-#experiencia .experiencia__item {
+#experiencia .experiencia_item {
   transform: translateY(14px);
   transition-delay: calc(var(--i, 0) * 90ms);
 }
 
-.experiencia__item {
+.experiencia_item {
   display: grid;
   grid-template-columns: 148px 1fr;
   gap: 40px;
@@ -17,21 +17,21 @@
   border-bottom: 1px solid var(--line-on-ink);
 }
 
-.experiencia__item:first-child {
+.experiencia_item:first-child {
   padding-top: 0;
 }
 
-.experiencia__item:last-child {
+.experiencia_item:last-child {
   border-bottom: none;
 }
 
-.experiencia__periodo-col {
+.experiencia_periodo-col {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.experiencia__periodo {
+.experiencia_periodo {
   font-size: 12px;
   color: var(--ink-mute);
   text-transform: uppercase;
@@ -39,7 +39,7 @@
   line-height: 1.4;
 }
 
-.experiencia__badge {
+.experiencia_badge {
   align-self: flex-start;
   font-size: 10px;
   font-weight: 500;
@@ -49,23 +49,23 @@
   letter-spacing: 0.1em;
 }
 
-.experiencia__cabecalho {
+.experiencia_cabecalho {
   margin-bottom: 14px;
 }
 
-.experiencia__cargo {
+.experiencia_cargo {
   font-size: 21px;
   font-weight: 400;
   margin-bottom: 6px;
 }
 
-.experiencia__empresa {
+.experiencia_empresa {
   font-size: 14px;
   color: var(--ink-mute);
 }
 
 /* Stack como uma linha só de texto discreto, em vez de tags soltas */
-.experiencia__stack {
+.experiencia_stack {
   font-size: 12px;
   color: var(--ink-mute);
   letter-spacing: 0.02em;
@@ -74,7 +74,7 @@
   border-bottom: 1px solid var(--line-on-ink);
 }
 
-.experiencia__destaques {
+.experiencia_destaques {
   display: grid;
   gap: 12px;
   margin: 0;
@@ -82,7 +82,7 @@
   list-style: none;
 }
 
-.experiencia__destaques li {
+.experiencia_destaques li {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.60;
@@ -91,7 +91,7 @@
   position: relative;
 }
 
-.experiencia__destaques li::before {
+.experiencia_destaques li::before {
   content: '-';
   position: absolute;
   left: 0;
@@ -99,7 +99,7 @@
   opacity: 0.4;
 }
 
-.experiencia__toggle {
+.experiencia_toggle {
   margin-top: 18px;
   background: none;
   border: none;
@@ -115,18 +115,18 @@
   transition: opacity 0.2s var(--ease-standard);
 }
 
-.experiencia__toggle:hover {
+.experiencia_toggle:hover {
   opacity: 0.6;
 }
 
 @media (max-width: 640px) {
-  .experiencia__item {
+  .experiencia_item {
     grid-template-columns: 1fr;
     gap: 14px;
     padding: 32px 0;
   }
 
-  .experiencia__periodo-col {
+  .experiencia_periodo-col {
     flex-direction: row;
     align-items: center;
     gap: 12px;

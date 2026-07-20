@@ -39,7 +39,7 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
     periodo: 'Janeiro 2026 - Atual',
     stack: ['JavaScript', 'Node.js', 'PHP', 'MongoDB', 'PostgreSQL', 'IA aplicada ao dev'],
     destaques: [
-      'Desenho e execução de scripts de migração de grandes volumes de dados (CRMs e sistemas financeiros), recebidos em XML, JSON, CSV e backups SQL/PostgreSQL, garantindo integridade no destino.',
+      'Execução de scripts de migração de grandes volumes de dados (CRMs e sistemas financeiros), recebidos em XML, JSON, CSV e backups SQL/PostgreSQL.',
       'Rotinas de ETL em Node.js para extração, transformação e carga de bases de dados',
       'Mapeamento e análise de campos para validação, testes e deploy em produção.',
       'Uso de IA como apoio à refatoração de código e aceleração de entregas.',
@@ -156,12 +156,6 @@ export const CURSOS: CursoOuCertificacao[] = [
     instituicao: 'Udemy',
     periodo: 'Fevereiro 2026 · 50,5h',
     descricao: 'Trilha completa de front-end moderno.',
-  },
-  {
-    titulo: 'Introdução à Gestão de Projetos',
-    instituicao: 'Fundação Bradesco',
-    periodo: 'Agosto 2025',
-    descricao: 'EAP e gestão de software.',
   },
   {
     titulo: 'Curso de JavaScript Roger Melo (CJRM)',

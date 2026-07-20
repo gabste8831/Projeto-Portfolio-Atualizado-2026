@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.hero__grid {
+.hero_grid {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
   gap: 64px;
@@ -12,16 +12,16 @@
   padding-bottom: 96px;
 }
 
-.hero__titulo {
+.hero_titulo {
   font-size: clamp(30px, 4vw, 46px);
   margin-bottom: 24px;
 }
 
-.hero__titulo em {
+.hero_titulo em {
   font-size: clamp(34px, 4vw, 46px);
 }
 
-.hero__resumo {
+.hero_resumo {
   font-size: clamp(14px, 1vw, 20px);
   font-weight: 300;
   line-height: 1.65;
@@ -30,7 +30,7 @@
   margin-bottom: 16px;
 }
 
-.hero__cta {
+.hero_cta {
   display: flex;
   align-items: center;
   gap: 28px;
@@ -38,18 +38,18 @@
   margin-top: 40px;
 }
 
-.hero__cta .botao--primario {
+.hero_cta .botao--primario {
   padding: 0;
 }
 
 /* ---- Foto com moldura deslocada ---- */
-.hero__photo-wrap {
+.hero_photo-wrap {
   position: relative;
   padding: 0 28px 8px 0;
   /* espaço para o frame aparecer à direita e em baixo */
 }
 
-.hero__frame {
+.hero_frame {
   position: absolute;
   inset: 0;
   /* frame cobre o wrap inteiro como fundo branco */
@@ -57,7 +57,7 @@
   z-index: 0;
 }
 
-.hero__photo {
+.hero_photo {
   position: relative;
   z-index: 1;
   margin: 0;
@@ -65,7 +65,7 @@
   /* o frame aparece nos 28px à direita e 28px em baixo que a foto não cobre */
 }
 
-.hero__photo img {
+.hero_photo img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -74,7 +74,7 @@
   filter: grayscale(1) contrast(1.05) brightness(0.98);
 }
 
-.hero__photo figcaption {
+.hero_photo figcaption {
   padding: 8px 0 0 8px;
   font-size: 8px;
   text-transform: uppercase;
@@ -84,7 +84,7 @@
 }
 
 @media (max-width: 860px) {
-  .hero__grid {
+  .hero_grid {
     grid-template-columns: 1fr;
     gap: 56px;
   }
@@ -93,7 +93,7 @@
     padding-top: 128px;
   }
 
-  .hero__photo-wrap {
+  .hero_photo-wrap {
     max-width: 380px;
   }
 }

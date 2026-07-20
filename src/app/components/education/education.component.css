@@ -1,10 +1,10 @@
-.formacao__grid {
+.formacao_grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 64px;
 }
 
-.formacao__lista {
+.formacao_lista {
   list-style: none;
   margin: 40px 0 0;
   padding: 0;
@@ -12,18 +12,18 @@
   gap: 28px;
 }
 
-.formacao__item h3 {
+.formacao_item h3 {
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 6px;
 }
 
-.formacao__item p {
+.formacao_item p {
   font-size: 13px;
   color: var(--ink-mute);
 }
 
-.cursos__lista {
+.cursos_lista {
   list-style: none;
   margin: 40px 0 0;
   padding: 0;
@@ -34,24 +34,24 @@
   overflow-y: auto;
 }
 
-.cursos__item {
+.cursos_item {
   background: var(--ink);
   padding: 18px 4px;
 }
 
-.cursos__cabecalho {
+.cursos_cabecalho {
   display: flex;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 4px;
 }
 
-.cursos__cabecalho h3 {
+.cursos_cabecalho h3 {
   font-size: 14px;
   font-weight: 400;
 }
 
-.cursos__cabecalho span {
+.cursos_cabecalho span {
   font-size: 11px;
   color: var(--ink-mute);
   white-space: nowrap;
@@ -59,13 +59,19 @@
   letter-spacing: 0.06em;
 }
 
-.cursos__item p {
+.cursos_item p {
   font-size: 13px;
   font-weight: 300;
   color: var(--ink-mute);
 }
 
 @media (max-width: 780px) {
-  .formacao__grid { grid-template-columns: 1fr; gap: 40px; }
-  .cursos__lista { max-height: none; }
+  .formacao_grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cursos_lista {
+    max-height: none;
+  }
 }

@@ -1,24 +1,24 @@
 <nav class="navbar">
-  <div class="navbar__inner container">
+  <div class="navbar_inner container">
     <a href="#topo" class="navbar_logo_container">
       <img src="/logo_gabdev_2.svg" alt="Logo Gabriel Steffens" class="navbar_logo" />
     </a>
 
     <!-- Links de navegação. O array vem do TS para não repetir markup -->
-    <ul class="navbar__links">
+    <ul class="navbar_links">
       <li *ngFor="let link of links">
         <a [href]="link.href">{{ link.rotulo }}</a>
       </li>
     </ul>
 
-    <button class="navbar__toggle" type="button" (click)="menuAberto.set(!menuAberto())"
+    <button class="navbar_toggle" type="button" (click)="menuAberto.set(!menuAberto())"
       [attr.aria-expanded]="menuAberto()" aria-label="Abrir menu de navegação">
       <span></span><span></span><span></span>
     </button>
   </div>
 
   <!-- Menu mobile: aparece condicionalmente com base no signal menuAberto -->
-  <ul class="navbar__mobile" *ngIf="menuAberto()">
+  <ul class="navbar_mobile" *ngIf="menuAberto()">
     <li *ngFor="let link of links">
       <a [href]="link.href" (click)="menuAberto.set(false)">{{ link.rotulo }}</a>
     </li>

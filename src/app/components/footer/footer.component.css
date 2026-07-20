@@ -2,7 +2,7 @@
   padding: 28px 0;
 }
 
-.footer__inner {
+.footer_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,13 +10,13 @@
   gap: 12px;
 }
 
-.footer__inner p {
+.footer_inner p {
   font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--ink-mute);
 }
 
-.footer__topo {
+.footer_topo {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -24,6 +24,6 @@
   transition: color 0.2s var(--ease-standard);
 }
 
-.footer__topo:hover {
+.footer_topo:hover {
   color: var(--ink);
 }

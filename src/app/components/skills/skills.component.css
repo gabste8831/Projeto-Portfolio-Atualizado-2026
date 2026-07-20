@@ -1,19 +1,19 @@
-.skills__grupos {
+.skills_grupos {
   margin-top: 48px;
   display: grid;
   gap: 40px;
 }
 
-.skills__grupo {
+.skills_grupo {
   padding-bottom: 36px;
   border-bottom: 1px solid var(--line);
 }
 
-.skills__grupo:last-child {
+.skills_grupo:last-child {
   border-bottom: none;
 }
 
-.skills__categoria {
+.skills_categoria {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -37,7 +37,7 @@
   text-align: center;
 }
 
-.logotipo__glifo {
+.logotipo_glifo {
   width: 52px;
   height: 52px;
   display: flex;
@@ -51,11 +51,11 @@
   transition: all 0.3s var(--ease-standard);
 }
 
-.logotipo:hover .logotipo__glifo {
+.logotipo:hover .logotipo_glifo {
   border-color: var(--ink);
 }
 
-.logotipo__icone {
+.logotipo_icone {
   width: 26px;
   height: 26px;
   object-fit: contain;
@@ -63,33 +63,33 @@
   transition: all 0.3s var(--ease-standard);
 }
 
-.logotipo:hover .logotipo__icone {
+.logotipo:hover .logotipo_icone {
   filter: grayscale(0) opacity(1);
 }
 
-.logotipo__monograma {
+.logotipo_monograma {
   line-height: 1;
   opacity: 0.55;
   transition: all 0.3s var(--ease-standard);
 }
 
-.logotipo:hover .logotipo__monograma {
+.logotipo:hover .logotipo_monograma {
   opacity: 1;
   cursor: default;
 }
 
-.logotipo__nome {
+.logotipo_nome {
   font-size: 10px;
   color: var(--ink-mute);
   line-height: 1.3;
 }
 
-.skills__soft {
+.skills_soft {
   margin-top: 8px;
   padding-top: 40px;
 }
 
-.skills__soft-itens {
+.skills_soft-itens {
   list-style: none;
   margin: 20px 0 0;
   padding: 0;
@@ -98,7 +98,7 @@
   gap: 14px 40px;
 }
 
-.skills__soft-itens li {
+.skills_soft-itens li {
   font-size: 15px;
   font-weight: 300;
   color: var(--ink-soft);
@@ -107,15 +107,15 @@
   cursor: default;
 }
 
-.skills__soft-itens li::before {
-  content: '—';
+.skills_soft-itens li::before {
+  content: '-';
   position: absolute;
   left: 0;
   opacity: 0.4;
 }
 
 @media (max-width: 560px) {
-  .skills__soft-itens {
+  .skills_soft-itens {
     grid-template-columns: 1fr;
   }
 }

@@ -80,24 +80,18 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
  */
 export const PROJETOS: ProjetoPortfolio[] = [
   {
-    titulo: 'Dashboard financeiro',
-    descricao: 'Aplicação para controle de gastos pessoais com gráficos e categorização automática.',
-    tecnologias: ['Angular', 'Node.js', 'PostgreSQL'],
-    repoUrl: `${PERFIL.github}/dashboard-financeiro`,
-    deployUrl: 'https://dashboard-financeiro.vercel.app',
+    titulo: 'Site TR Transportes',
+    descricao: 'Landing page institucional para uma empresa de transporte, construída a partir de design gerado no Google Stitch, com formulário de contato integrado ao Formspree.',
+    tecnologias: ['Next.js', 'TypeScript', 'CSS', 'React'],
+    repoUrl: `${PERFIL.github}/Tr-Transportes-Landing-Page`,
+    deployUrl: 'https://tr-transportes-landing-page.vercel.app',
   },
   {
-    titulo: 'API de gestão de tarefas',
-    descricao: 'REST API com autenticação JWT, testes automatizados e documentação via Swagger.',
-    tecnologias: ['Express', 'MongoDB', 'JWT'],
-    repoUrl: `${PERFIL.github}/api-tarefas`,
-  },
-  {
-    titulo: 'Loja virtual',
-    descricao: 'E-commerce completo com carrinho, checkout e painel administrativo.',
-    tecnologias: ['Vue.js', 'PHP', 'MySQL'],
-    repoUrl: `${PERFIL.github}/loja-virtual`,
-    deployUrl: 'https://loja-virtual-demo.vercel.app',
+    titulo: 'Rio Clube Handebol',
+    descricao: 'Landing page institucional para um time de handebol de Rio do Sul/SC, com histórico do projeto, treinos, galeria de fotos, apoiadores e feed do Instagram.',
+    tecnologias: ['Next.js', 'TypeScript', 'CSS', 'React'],
+    repoUrl: `${PERFIL.github}/Institucional-Rio-Clube-Handebol---Landing-Page`,
+    deployUrl: 'https://rioclubehandebol.vercel.app',
   },
 ];
 

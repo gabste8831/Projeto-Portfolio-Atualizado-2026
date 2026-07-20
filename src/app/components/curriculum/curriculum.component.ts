@@ -9,13 +9,13 @@ import { RevealDirective } from '../../shared/reveal.directive';
  * e certificações complementares à direita.
  */
 @Component({
-  selector: 'app-education',
+  selector: 'app-curriculum',
   standalone: true,
   imports: [CommonModule, RevealDirective],
-  templateUrl: './education.component.html',
-  styleUrl: './education.component.css',
+  templateUrl: './curriculum.component.html',
+  styleUrl: './curriculum.component.css',
 })
-export class EducationComponent {
+export class CurriculumComponent {
   readonly formacao = FORMACAO;
   readonly cursos = CURSOS;
   readonly perfil = PERFIL;

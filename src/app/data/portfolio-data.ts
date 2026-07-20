@@ -36,7 +36,7 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
   {
     cargo: 'Desenvolvedor Back-End - Migração de Dados',
     empresa: 'Apresenta.me - Sistema para Gestão Imobiliária',
-    periodo: 'Janeiro 2026 - Atual',
+    periodo: 'Jan 2026 - Atual',
     stack: ['JavaScript', 'Node.js', 'PHP', 'MongoDB', 'PostgreSQL', 'IA aplicada ao dev'],
     destaques: [
       'Execução de scripts de migração de grandes volumes de dados (CRMs e sistemas financeiros), recebidos em XML, JSON, CSV e backups SQL/PostgreSQL.',
@@ -49,7 +49,7 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
   {
     cargo: 'Desenvolvedor Front-End Pleno III',
     empresa: 'Apresenta.me - Sistema para Gestão Imobiliária',
-    periodo: 'Abril 2025 - Janeiro 2026',
+    periodo: 'Abr 2025 - Jan 2026',
     stack: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Figma', 'UI/UX'],
     destaques: [
       'Conversão de layouts em interfaces responsivas integradas ao CRM da empresa. + de 80 sites desenvolvidos',
@@ -150,17 +150,5 @@ export const CURSOS: CursoOuCertificacao[] = [
     instituicao: 'Alura',
     periodo: 'Março 2026',
     descricao: 'Foco em back-end, npm e bancos NoSQL.',
-  },
-  {
-    titulo: 'Formação Front-end: HTML, CSS, JS, React, TypeScript e +',
-    instituicao: 'Udemy',
-    periodo: 'Fevereiro 2026 · 50,5h',
-    descricao: 'Trilha completa de front-end moderno.',
-  },
-  {
-    titulo: 'Curso de JavaScript Roger Melo (CJRM)',
-    instituicao: 'Eduzz',
-    periodo: 'Junho 2025',
-    descricao: 'Lógica, POO e estrutura de dados.',
   },
 ];

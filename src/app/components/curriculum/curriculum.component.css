@@ -1,0 +1,81 @@
+.curriculo {
+    padding: 60px 0;
+}
+
+
+.curriculo_card {
+    background: var(--line);
+    padding: 24px 20px;
+    margin-top: 40px;
+    border: 1px solid var(--line-on-ink);
+    /* Sutil borda para dar acabamento */
+}
+
+.curriculo_card_cabecalho {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.curriculo_card_cabecalho h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.curriculo_card_cabecalho span {
+    font-size: 11px;
+    color: var(--ink-mute);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.curriculo_card p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--ink-mute);
+    line-height: 1.5;
+}
+
+/* Espelhamento visual do botão contato_redes */
+.curriculo_botao {
+    background-color: var(--ink-mute);
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin-top: 24px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.curriculo_botao:hover {
+    background-color: rgba(255, 255, 255, 0.192);
+    cursor: pointer;
+}
+
+.curriculo_botao a {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsividade idêntica à formação */
+@media (max-width: 780px) {
+    .curriculo_grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .curriculo_texto p:first-child {
+        margin-top: 24px;
+    }
+
+    .curriculo_card {
+        margin-top: 24px;
+    }
+}

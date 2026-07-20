@@ -7,6 +7,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CurriculumComponent } from './components/curriculum/curriculum.component';
 
 /**
  * Componente raiz.
@@ -28,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
     EducationComponent,
     ContactComponent,
     FooterComponent,
+    CurriculumComponent,
   ],
   template: `
     <app-navbar />
@@ -37,9 +39,10 @@ import { FooterComponent } from './components/footer/footer.component';
       <app-experience />
       <app-skills />
       <app-education />
+      <app-curriculum />
       <app-contact />
     </main>
     <app-footer />
   `,
 })
-export class AppComponent {}
+export class AppComponent { }

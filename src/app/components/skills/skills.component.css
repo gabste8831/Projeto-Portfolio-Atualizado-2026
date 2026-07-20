@@ -48,7 +48,7 @@
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: border-color 0.25s var(--ease-standard), color 0.25s var(--ease-standard);
+  transition: all 0.3s var(--ease-standard);
 }
 
 .logotipo:hover .logotipo__glifo {
@@ -60,7 +60,7 @@
   height: 26px;
   object-fit: contain;
   filter: grayscale(1) opacity(0.55);
-  transition: filter 0.3s var(--ease-standard);
+  transition: all 0.3s var(--ease-standard);
 }
 
 .logotipo:hover .logotipo__icone {
@@ -69,6 +69,13 @@
 
 .logotipo__monograma {
   line-height: 1;
+  opacity: 0.55;
+  transition: all 0.3s var(--ease-standard);
+}
+
+.logotipo:hover .logotipo__monograma {
+  opacity: 1;
+  cursor: default;
 }
 
 .logotipo__nome {
@@ -97,6 +104,7 @@
   color: var(--ink-soft);
   padding-left: 18px;
   position: relative;
+  cursor: default;
 }
 
 .skills__soft-itens li::before {

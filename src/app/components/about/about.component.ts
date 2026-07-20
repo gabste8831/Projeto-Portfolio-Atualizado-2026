@@ -4,7 +4,7 @@ import { PERFIL } from '../../data/portfolio-data';
 import { RevealDirective } from '../../shared/reveal.directive';
 
 /**
- * Seção "Sobre" — objetivo profissional em destaque (parágrafo grande, estilo
+ * Seção "Sobre" - objetivo profissional em destaque (parágrafo grande, estilo
  * Apple) e uma pequena lista de fatos rápidos ao lado.
  */
 @Component({

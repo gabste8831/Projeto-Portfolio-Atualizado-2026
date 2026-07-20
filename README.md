@@ -1,4 +1,4 @@
-# Portfólio — Gabriel Steffens
+# Portfólio - Gabriel Steffens
 
 Portfólio pessoal em **Angular 18** (standalone components), com dados extraídos do currículo e um design minimalista e editorial, monocromático, com fontes finas contrastadas por acentos em DM Serif Display: tipografia grande, seções alternando fundo preto/cinza-claro, azul de destaque e animações suaves de "reveal" ao rolar a página.
 
@@ -39,11 +39,11 @@ src/app/
 
 **Sugestão de ordem para estudar o código:**
 
-1. `models/portfolio-data.model.ts` e `data/portfolio-data.ts` — entenda como o conteúdo é separado da apresentação (o mesmo princípio de ETL que você aplica no trabalho: dado bruto → modelado → consumido).
-2. `app.component.ts` — veja como a página é só a soma dos componentes, na ordem em que aparecem.
-3. `components/navbar` — o componente mais simples, bom para entender `standalone`, `signal()` e eventos de clique.
-4. `components/hero` — usa o `*ngFor` para desenhar o diagrama SVG a partir de uma lista de objetos (nada é "hardcoded" no HTML).
-5. `shared/reveal.directive.ts` — uma diretiva de atributo customizada usando `IntersectionObserver`; aplicada em várias seções via `appReveal`.
+1. `models/portfolio-data.model.ts` e `data/portfolio-data.ts` - entenda como o conteúdo é separado da apresentação (o mesmo princípio de ETL que você aplica no trabalho: dado bruto → modelado → consumido).
+2. `app.component.ts` - veja como a página é só a soma dos componentes, na ordem em que aparecem.
+3. `components/navbar` - o componente mais simples, bom para entender `standalone`, `signal()` e eventos de clique.
+4. `components/hero` - usa o `*ngFor` para desenhar o diagrama SVG a partir de uma lista de objetos (nada é "hardcoded" no HTML).
+5. `shared/reveal.directive.ts` - uma diretiva de atributo customizada usando `IntersectionObserver`; aplicada em várias seções via `appReveal`.
 6. Os demais componentes seguem o mesmo padrão: um array de dados tipado + `*ngFor` no template.
 
 ## Pontos de Angular usados no projeto
@@ -56,6 +56,6 @@ src/app/
 
 ## Personalizando
 
-- Para atualizar textos (experiências, skills, cursos): edite só `src/app/data/portfolio-data.ts` — nenhum HTML precisa mudar.
+- Para atualizar textos (experiências, skills, cursos): edite só `src/app/data/portfolio-data.ts` - nenhum HTML precisa mudar.
 - Para ajustar cores/tipografia: edite as variáveis CSS em `src/styles.css` (seção `:root`).
 - Para trocar as fontes: a pilha usa fontes do sistema (`-apple-system` etc.), então funciona sem downloads externos.

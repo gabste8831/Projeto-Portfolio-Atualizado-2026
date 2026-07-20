@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 /**
- * Navbar fixa, translúcida, no estilo apple.com — sempre com o mesmo fundo
+ * Navbar fixa, translúcida, no estilo apple.com - sempre com o mesmo fundo
  * escuro semitransparente (o "frosted glass"), independente do scroll.
  *
  * Pontos de estudo:

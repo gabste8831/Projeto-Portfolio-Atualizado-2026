@@ -1,14 +1,14 @@
 /* ==========================================================================
-   Design tokens — v2: minimalismo editorial monocromático.
+   Design tokens - v2: minimalismo editorial monocromático.
    Paleta 100% em tons neutros (sem matiz de cor); contraste vem da tipografia:
    um sans fino e discreto para tudo, com DM Serif Display (itálico) reservado
    para poucas palavras de destaque, à la editorial de moda.
    ========================================================================== */
 /* Fontes carregadas via <link> no index.html (ver <head>), não por @import
-   aqui — assim o build não depende de acesso de rede externo. */
+   aqui - assim o build não depende de acesso de rede externo. */
 
 :root {
-  /* Cor — estritamente monocromática (preto, branco, cinzas) */
+  /* Cor - estritamente monocromática (preto, branco, cinzas) */
   --paper: #f6f5f2;
   --paper-alt: #ece9e3;
   --ink: #141311;
@@ -60,7 +60,7 @@ body {
   position: relative;
 }
 
-/* Grão de filme sutil sobre toda a página — referência às fotos editoriais
+/* Grão de filme sutil sobre toda a página - referência às fotos editoriais
    em preto e branco; é a nossa "assinatura" visual discreta */
 body::before {
   content: '';
@@ -84,7 +84,7 @@ h4 {
   line-height: 1.08;
 }
 
-/* Palavra(s) de destaque em serifa — usar com moderação, no máximo
+/* Palavra(s) de destaque em serifa - usar com moderação, no máximo
    uma expressão por título */
 em,
 .destaque {
@@ -129,7 +129,7 @@ section {
   }
 }
 
-/* Seções alternam papel claro / tinta escura — sempre em tons neutros */
+/* Seções alternam papel claro / tinta escura - sempre em tons neutros */
 .secao--clara {
   background: var(--paper);
   color: var(--ink);
@@ -172,7 +172,7 @@ section {
   max-width: 44ch;
 }
 
-/* Botões — linhas finas, sem preenchimento colorido */
+/* Botões - linhas finas, sem preenchimento colorido */
 .botao {
   display: inline-flex;
   align-items: center;

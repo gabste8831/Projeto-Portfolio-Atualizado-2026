@@ -5,7 +5,7 @@
  * "de negócio" (currículo do Gabriel) mora aqui, tipado pelas interfaces em
  * `models/portfolio-data.model.ts`. Cada componente injeta este arquivo (ou
  * futuramente um serviço) e apenas renderiza. Isso é o mesmo princípio de
- * separar dados/ETL da camada de apresentação — algo que o próprio Gabriel
+ * separar dados/ETL da camada de apresentação - algo que o próprio Gabriel
  * aplica no trabalho dele.
  */
 import {

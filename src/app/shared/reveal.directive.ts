@@ -13,7 +13,7 @@ import { Directive, ElementRef, OnDestroy, OnInit } from '@angular/core';
  *   comportamento" a um elemento existente, sem criar um componente novo.
  *   Uso no template: `<div appReveal>...</div>`.
  * - `IntersectionObserver` é uma API nativa do browser (não é do Angular) que
- *   avisa quando um elemento entra/sai da área visível — muito mais barata
+ *   avisa quando um elemento entra/sai da área visível - muito mais barata
  *   que ficar calculando scroll manualmente.
  * - `ElementRef` dá acesso ao elemento DOM real por trás do componente/diretiva.
  */
@@ -24,7 +24,7 @@ import { Directive, ElementRef, OnDestroy, OnInit } from '@angular/core';
 export class RevealDirective implements OnInit, OnDestroy {
   private observer?: IntersectionObserver;
 
-  constructor(private readonly host: ElementRef<HTMLElement>) {}
+  constructor(private readonly host: ElementRef<HTMLElement>) { }
 
   ngOnInit(): void {
     this.observer = new IntersectionObserver(

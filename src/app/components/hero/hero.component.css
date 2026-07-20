@@ -61,7 +61,7 @@
   position: relative;
   z-index: 1;
   margin: 0;
-  /* sem transform — a foto ocupa naturalmente o canto superior-esquerdo */
+  /* sem transform - a foto ocupa naturalmente o canto superior-esquerdo */
   /* o frame aparece nos 28px à direita e 28px em baixo que a foto não cobre */
 }
 

@@ -8,7 +8,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
  *
  * Cada tecnologia exibe seu logo oficial (via Simple Icons CDN, já com a
  * cor de marca), dentro do mesmo quadrado de linha fina usado no resto do
- * site — em escala de cinza por padrão, revelando a cor no hover. Itens
+ * site - em escala de cinza por padrão, revelando a cor no hover. Itens
  * sem logo de marca (conceitos como "APIs REST" ou "UI/UX") caem no
  * fallback de monograma tipográfico.
  */
@@ -47,7 +47,7 @@ export class SkillsComponent {
     'AWS (EC2, S3, RDS, IAM)': 'AWS',
     Docker: 'DK',
     Kubernetes: 'K8S',
-    'noções de CI/CD': 'CI',
+    'Noções de CI/CD': 'CI',
     'Git/GitHub': 'GIT',
     npm: 'NPM',
     Figma: 'FIG',
@@ -78,7 +78,7 @@ export class SkillsComponent {
     'Vue.js': 'vuedotjs',
     Angular: 'angular',
     HTML5: 'html5',
-    CSS3: 'css3',
+    CSS3: 'css',
     MongoDB: 'mongodb',
     PostgreSQL: 'postgresql',
     MySQL: 'mysql',
@@ -96,5 +96,18 @@ export class SkillsComponent {
   iconeUrl(item: string): string | null {
     const slug = this.icones[item];
     return slug ? `https://cdn.simpleicons.org/${slug}` : null;
+  }
+
+  /** Itens cujo ícone falhou ao carregar (CDN fora do ar, bloqueio de adblocker etc.) */
+  private readonly iconesQuebrados = new Set<string>();
+
+  /** Chamado pelo (error) do <img>: registra a falha e força o fallback de monograma */
+  aoErrarIcone(item: string): void {
+    this.iconesQuebrados.add(item);
+  }
+
+  /** True quando devemos mostrar o ícone de marca (existe slug e ele carregou normalmente) */
+  temIcone(item: string): boolean {
+    return !!this.icones[item] && !this.iconesQuebrados.has(item);
   }
 }

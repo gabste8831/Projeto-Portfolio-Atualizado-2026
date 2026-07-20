@@ -35,27 +35,26 @@ export const PERFIL: PerfilPessoal = {
 export const EXPERIENCIAS: ExperienciaProfissional[] = [
   {
     cargo: 'Desenvolvedor Back-End - Migração de Dados',
-    empresa: 'Apresenta.me (sistema de gestão imobiliária)',
+    empresa: 'Apresenta.me - Sistema para Gestão Imobiliária',
     periodo: 'Janeiro 2026 - Atual',
     stack: ['JavaScript', 'Node.js', 'PHP', 'MongoDB', 'PostgreSQL', 'IA aplicada ao dev'],
     destaques: [
       'Desenho e execução de scripts de migração de grandes volumes de dados (CRMs e sistemas financeiros), recebidos em XML, JSON, CSV e backups SQL/PostgreSQL, garantindo integridade no destino.',
-      'Rotinas de ETL em Node.js para extração, transformação e carga de bases em XML, CSV e SQL.',
-      'Mapeamento de campos e análise de consistência com SQL e scripts de validação antes do deploy em produção.',
-      'Modelagem de dados de clientes em MongoDB para dashboards internos de métricas de qualidade.',
-      'Uso de IA como apoio à refatoração de código e aceleração de entregas em prazos reduzidos.',
+      'Rotinas de ETL em Node.js para extração, transformação e carga de bases de dados',
+      'Mapeamento e análise de campos para validação, testes e deploy em produção.',
+      'Uso de IA como apoio à refatoração de código e aceleração de entregas.',
     ],
     atual: true,
   },
   {
     cargo: 'Desenvolvedor Front-End Pleno III',
-    empresa: 'Apresenta.me (sistema de gestão imobiliária)',
+    empresa: 'Apresenta.me - Sistema para Gestão Imobiliária',
     periodo: 'Abril 2025 - Janeiro 2026',
     stack: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Figma', 'UI/UX'],
     destaques: [
-      'Liderança interina das equipes de Web e Design, conduzindo code reviews e garantindo fidelidade entre protótipos no Figma e a implementação final.',
-      'Conversão de layouts em interfaces responsivas integradas ao CRM da empresa, com componentes dinâmicos em Vue.js.',
+      'Conversão de layouts em interfaces responsivas integradas ao CRM da empresa. + de 80 sites desenvolvidos',
       'Mentoria de desenvolvedores juniores em boas práticas de CSS moderno, arquitetura Front-End e regras de negócio do CRM.',
+      'Liderança interina das equipes de Web e Design, conduzindo code reviews e garantindo fidelidade entre protótipos no Figma e a implementação final.',
     ],
     atual: false,
   },
@@ -67,7 +66,7 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
     destaques: [
       'Gestão de estoque, marketplaces e marketing digital, com otimização para mecanismos de busca (SEO, Google Search, blogs).',
       'Participação em duas migrações de plataforma do site próprio.',
-      'Metas de venda de 2023 e 2024 concluídas, totalizando cerca de R$ 500 mil em liquidez.',
+      'Experiência prática em múltiplas áreas relacionadas ao fluxo de trabalho de um e-commerce.',
     ],
     atual: false,
   },

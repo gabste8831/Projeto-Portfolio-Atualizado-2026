@@ -6,10 +6,11 @@ import { RevealDirective } from '../../shared/reveal.directive';
 /**
  * Seção "Skills".
  *
- * Em vez de ícones/logos de marca (que são propriedade de terceiros), cada
- * tecnologia ganha um "logotipo" minimalista próprio: um monograma de 1-2
- * letras dentro de um quadrado de linha fina — um tratamento tipográfico,
- * não uma cópia de marca — mantendo a pegada monocromática do resto do site.
+ * Cada tecnologia exibe seu logo oficial (via Simple Icons CDN, já com a
+ * cor de marca), dentro do mesmo quadrado de linha fina usado no resto do
+ * site — em escala de cinza por padrão, revelando a cor no hover. Itens
+ * sem logo de marca (conceitos como "APIs REST" ou "UI/UX") caem no
+ * fallback de monograma tipográfico.
  */
 @Component({
   selector: 'app-skills',
@@ -61,5 +62,39 @@ export class SkillsComponent {
     }
     const primeiraPalavra = item.replace(/[^a-zA-Z ]/g, '').trim().split(' ')[0] ?? item;
     return primeiraPalavra.slice(0, 2).toUpperCase();
+  }
+
+  /** Slugs do Simple Icons (simpleicons.org) para as tecnologias com logo de marca */
+  private readonly icones: Record<string, string> = {
+    'JavaScript (ES6+)': 'javascript',
+    'Node.js': 'nodedotjs',
+    TypeScript: 'typescript',
+    PHP: 'php',
+    Express: 'express',
+    Laravel: 'laravel',
+    'Supabase (BaaS)': 'supabase',
+    'React.js': 'react',
+    'React Native': 'react',
+    'Vue.js': 'vuedotjs',
+    Angular: 'angular',
+    HTML5: 'html5',
+    CSS3: 'css3',
+    MongoDB: 'mongodb',
+    PostgreSQL: 'postgresql',
+    MySQL: 'mysql',
+    phpMyAdmin: 'phpmyadmin',
+    'AWS (EC2, S3, RDS, IAM)': 'amazonaws',
+    Docker: 'docker',
+    Kubernetes: 'kubernetes',
+    'Git/GitHub': 'github',
+    npm: 'npm',
+    Figma: 'figma',
+    'Adobe Photoshop': 'adobephotoshop',
+  };
+
+  /** Retorna a URL do ícone de marca (Simple Icons CDN) ou null se a skill não tiver um mapeado */
+  iconeUrl(item: string): string | null {
+    const slug = this.icones[item];
+    return slug ? `https://cdn.simpleicons.org/${slug}` : null;
   }
 }

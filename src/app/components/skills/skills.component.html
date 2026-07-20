@@ -8,7 +8,13 @@
         <h3 class="skills__categoria">{{ grupo.categoria }}</h3>
         <div class="logotipos">
           <div class="logotipo" *ngFor="let item of grupo.itens">
-            <span class="logotipo__glifo">{{ sigla(item) }}</span>
+            <span class="logotipo__glifo">
+              <img *ngIf="iconeUrl(item) as url; else monograma" [src]="url" [alt]="item" class="logotipo__icone"
+                loading="lazy" />
+              <ng-template #monograma>
+                <span class="logotipo__monograma">{{ sigla(item) }}</span>
+              </ng-template>
+            </span>
             <span class="logotipo__nome">{{ item }}</span>
           </div>
         </div>

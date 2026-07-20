@@ -18,14 +18,13 @@ export class AboutComponent {
   readonly perfil = PERFIL;
 
   readonly objetivo =
-    'Atuar como desenvolvedor full Stack, aplicando princípios de engenharia de software na criação ' +
+    'Atuar como desenvolvedor, aplicando princípios de engenharia de software na criação ' +
     'de soluções, desde interfaces à estruturas de hospedagem. Busco alinhar a parte ' +
-    'técnica à visão estratégica de negócio, mirando, a longo prazo, a coordenação técnica.';
+    'técnica à visão estratégica de negócio, e assim evoluir na carreira em tecnologia.';
 
   readonly fatos = [
     { rotulo: 'localização', valor: this.perfil.localizacao },
     { rotulo: 'idade', valor: `${this.perfil.idade} anos` },
-    { rotulo: 'foco atual', valor: 'Back-end · Node.js · ETL' },
-    { rotulo: 'objetivo', valor: 'Full Stack → coordenação técnica' },
+    { rotulo: 'atuação', valor: 'Back-end · Node.js · ETL' },
   ];
 }

@@ -55,6 +55,22 @@
   border-color: var(--ink);
 }
 
+.logotipo__icone {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.55);
+  transition: filter 0.3s var(--ease-standard);
+}
+
+.logotipo:hover .logotipo__icone {
+  filter: grayscale(0) opacity(1);
+}
+
+.logotipo__monograma {
+  line-height: 1;
+}
+
 .logotipo__nome {
   font-size: 10px;
   color: var(--ink-mute);
@@ -91,5 +107,7 @@
 }
 
 @media (max-width: 560px) {
-  .skills__soft-itens { grid-template-columns: 1fr; }
+  .skills__soft-itens {
+    grid-template-columns: 1fr;
+  }
 }

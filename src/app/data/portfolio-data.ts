@@ -11,6 +11,7 @@
 import {
   CursoOuCertificacao,
   ExperienciaProfissional,
+  FatoRapido,
   GrupoDeHabilidades,
   ItemFormacao,
   PerfilPessoal,
@@ -24,15 +25,34 @@ export const PERFIL: PerfilPessoal = {
   idade: 22,
   email: 'gabrielsteffens2003@gmail.com',
   telefone: '(47) 9 8831-3652',
-  linktelefone: 'https://wa.me/5547988313652',
+  telefoneHref: 'tel:+5547988313652',
+  whatsapp: 'https://wa.me/5547988313652',
   linkedin: 'https://www.linkedin.com/in/gabriel-steffens-/',
   github: 'https://github.com/gabste8831',
+  instagram: 'https://www.instagram.com/gabss.dev',
+  foto: '/gabriel.jpg',
+  logoUrl: '/logo_gabdev_2.svg',
+  curriculoUrl: '/Gabriel Steffens Currículo 2026.pdf',
+  curriculoNomeArquivo: 'Curriculo_Gabriel_Steffens.pdf',
   resumo: [
     `Prazer, Gabriel Steffens!`,
     `Sou dev full-stack, atualmente focado em arquiteturas Node.js e JavaScript pela Apresenta.me, onde atuo diretamente em processos de migração, modelagem e análise de dados.`,
     `Estou na 8ª fase da graduação em Sistemas de Informação. Já fui dev front-end e somo mais de 3 anos de vivência com SEO, marketing digital e análise de comércio digital.`
   ]
 };
+
+/** Texto de objetivo profissional exibido em destaque na seção "Sobre" */
+export const OBJETIVO_PROFISSIONAL =
+  'Atuar como desenvolvedor, aplicando princípios de engenharia de software na criação ' +
+  'de soluções, desde interfaces à estruturas de hospedagem. Busco alinhar a parte ' +
+  'técnica à visão estratégica de negócio, e assim evoluir na carreira em tecnologia.';
+
+/** Fatos rápidos exibidos ao lado do objetivo, na seção "Sobre" */
+export const FATOS_RAPIDOS: FatoRapido[] = [
+  { rotulo: 'localização', valor: PERFIL.localizacao },
+  { rotulo: 'idade', valor: `${PERFIL.idade} anos` },
+  { rotulo: 'atuação', valor: 'Back-end · Node.js · ETL' },
+];
 
 export const EXPERIENCIAS: ExperienciaProfissional[] = [
   {

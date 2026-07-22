@@ -14,10 +14,21 @@ export interface PerfilPessoal {
   idade: number;
   email: string;
   telefone: string;
+  /** Link "tel:" já limpo (só dígitos e o +55), pronto pro atributo href */
+  telefoneHref: string;
+  whatsapp: string;
   linkedin: string;
   github: string;
+  instagram: string;
   resumo: string[];
-  linktelefone: string;
+  /** Caminho da foto de perfil usada no Hero (dentro de /public) */
+  foto: string;
+  /** Caminho do logotipo usado na navbar (dentro de /public) */
+  logoUrl: string;
+  /** Caminho do PDF do currículo (dentro de /public) */
+  curriculoUrl: string;
+  /** Nome do arquivo sugerido ao baixar o currículo (atributo `download`) */
+  curriculoNomeArquivo: string;
 }
 
 export interface ExperienciaProfissional {
@@ -54,6 +65,12 @@ export interface NoPipeline {
   rotulo: string;
   x: number;
   y: number;
+}
+
+/** Item da lista de "fatos rápidos" exibida ao lado do objetivo, na seção Sobre */
+export interface FatoRapido {
+  rotulo: string;
+  valor: string;
 }
 
 /** Projeto em destaque na seção "Projetos" (repositórios com deploy) */

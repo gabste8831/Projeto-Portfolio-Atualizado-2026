@@ -51,3 +51,70 @@
     border-top: none;
   }
 }
+
+/* ---- Faixa de redes & contato, abaixo do grid de objetivo/fatos ---- */
+.sobre_redes {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.sobre_redes-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 4px;
+}
+
+.sobre_rede {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s var(--ease-standard), border-color 0.2s var(--ease-standard),
+    opacity 0.2s var(--ease-standard);
+}
+
+.sobre_rede:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.sobre_rede-icone {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+/* Os logos de marca (LinkedIn/GitHub/Instagram) ficam SEMPRE coloridos -
+   diferente do resto do site (monocromático) e do carrossel de Skills
+   (cinza por padrão); aqui foi um pedido explícito pra ficarem "coloridinhas" */
+.sobre_rede-icone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s var(--ease-standard);
+}
+
+.sobre_rede:hover .sobre_rede-icone img {
+  transform: scale(1.08);
+}
+
+/* Envelope genérico do e-mail: sem marca própria, então acompanha o texto */
+.sobre_rede-icone svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ink-mute);
+  transition: color 0.2s var(--ease-standard);
+}
+
+.sobre_rede:hover .sobre_rede-icone svg {
+  color: var(--ink);
+}

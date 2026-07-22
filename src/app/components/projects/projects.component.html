@@ -6,6 +6,7 @@
     <div class="projetos_grid" appReveal>
       <article class="projeto_card" *ngFor="let projeto of projetos">
         <div class="projeto_conteudo">
+          <img class= "projeto_imagem" [src]="projeto.imagem" [alt]="projeto.titulo">
           <h3 class="projeto_titulo">{{ projeto.titulo }}</h3>
           <p class="projeto_descricao">{{ projeto.descricao }}</p>
 

@@ -65,4 +65,5 @@ export interface ProjetoPortfolio {
   repoUrl: string;
   /** URL da aplicação publicada; omitir quando não houver deploy público */
   deployUrl?: string;
+  imagem: string;
 }

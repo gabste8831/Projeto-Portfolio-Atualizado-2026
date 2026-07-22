@@ -99,7 +99,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
     'AWS (EC2, S3, RDS, IAM)': 'AWS',
     Docker: 'DK',
     Kubernetes: 'K8S',
-    'noções de CI/CD': 'CI',
+    'Noções de CI/CD': 'CI',
     'Git/GitHub': 'GIT',
     npm: 'NPM',
     Figma: 'FIG',

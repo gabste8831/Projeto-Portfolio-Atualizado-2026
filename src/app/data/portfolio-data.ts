@@ -82,17 +82,33 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
 export const PROJETOS: ProjetoPortfolio[] = [
   {
     titulo: 'Site TR Transportes',
-    descricao: 'Landing page institucional para uma empresa de transporte, construída a partir de design gerado no Google Stitch, com formulário de contato integrado ao Formspree.',
+    descricao: 'Landing page institucional para uma empresa de transporte de cargas, com informações sobre a empresa, serviços, contato e formulário de orçamento.',
     tecnologias: ['Next.js', 'TypeScript', 'CSS', 'React'],
     repoUrl: `${PERFIL.github}/Tr-Transportes-Landing-Page`,
     deployUrl: 'https://tr-transportes-landing-page.vercel.app',
+    imagem: '/Site_TR_Transportes.png',
   },
   {
-    titulo: 'Rio Clube Handebol',
-    descricao: 'Landing page institucional para um time de handebol de Rio do Sul/SC, com histórico do projeto, treinos, galeria de fotos, apoiadores e feed do Instagram.',
+    titulo: 'Site Rio Clube Handebol',
+    descricao: 'Landing page institucional para o time oficial de handebol de Rio do Sul - SC, com histórico do projeto, treinos, galeria de fotos, apoiadores e feed do Instagram.',
     tecnologias: ['Next.js', 'TypeScript', 'CSS', 'React'],
     repoUrl: `${PERFIL.github}/Institucional-Rio-Clube-Handebol---Landing-Page`,
     deployUrl: 'https://rioclubehandebol.vercel.app',
+    imagem: '/Site_Handebol.png',
+  },
+  {
+    titulo: 'Plataforma FreelaCloud',
+    descricao: 'Plataforma desenvolvida para conectar profissionais autônomos a clientes que precisam de serviços - Projeto acadêmico.',
+    tecnologias: ['Next.js', 'Tailwind', 'PostgreSQL', 'Prisma', 'Javascript', 'Docker'],
+    repoUrl: `${PERFIL.github}/Plataforma-Freelancers-com-NextJS-e-Docker`,
+    imagem: '/FreelaCloud.png',
+  },
+  {
+    titulo: 'InsuGuia Mobile',
+    descricao: 'Aplicativo como protótipo de um sistema de suporte à decisão clínica (CDSS) no manejo de pacientes internados não-críticos com diabetes - Projeto acadêmico.',
+    tecnologias: ['Flutter', 'Dart', 'SQLite', 'Figma'],
+    repoUrl: `${PERFIL.github}/InsuGuia-project`,
+    imagem: '/Insuguia.png',
   },
 ];
 

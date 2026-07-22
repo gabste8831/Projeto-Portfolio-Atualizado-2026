@@ -1,6 +1,6 @@
 .projetos_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-top: 48px;
 }
@@ -23,6 +23,12 @@
   font-size: 19px;
   font-weight: 400;
   margin-bottom: 10px;
+}
+
+.projeto_imagem {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
 }
 
 .projeto_descricao {
@@ -82,6 +88,10 @@
 }
 
 @media (max-width: 780px) {
+  .projetos_grid {
+    grid-template-columns: 1fr;
+  }
+
   .projetos_rodape {
     flex-direction: column;
     align-items: flex-start;

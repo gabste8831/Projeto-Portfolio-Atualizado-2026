@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, signal, ViewChild } from '@angular/core';
 import { HABILIDADES, SOFT_SKILLS } from '../../data/portfolio-data';
 import { RevealDirective } from '../../shared/reveal.directive';
 
@@ -28,8 +28,14 @@ export class SkillsComponent implements OnInit, OnDestroy {
   readonly grupos = HABILIDADES;
   readonly softSkills = SOFT_SKILLS;
 
-  /** Categoria atualmente visível no carrossel */
   readonly indiceAtivo = signal(0);
+
+  @ViewChild('viewport') viewportRef!: ElementRef<HTMLElement>;
+  readonly arrastando = signal(false);
+  readonly arrastoPercentual = signal(0);
+  private touchStartX = 0;
+  private larguraViewport = 0;
+  private readonly limiarSwipe = 18;
 
   private readonly intervaloMs = 10_000;
   private timer?: ReturnType<typeof setInterval>;
@@ -50,6 +56,39 @@ export class SkillsComponent implements OnInit, OnDestroy {
   anterior(): void {
     this.indiceAtivo.update((i) => (i - 1 + this.grupos.length) % this.grupos.length);
     this.reiniciarAutoAvanco();
+  }
+
+  aoTocarInicio(evento: TouchEvent): void {
+    this.pararAutoAvanco();
+    this.touchStartX = evento.touches[0].clientX;
+    this.larguraViewport = this.viewportRef.nativeElement.offsetWidth;
+    this.arrastando.set(true);
+  }
+
+  aoTocarMover(evento: TouchEvent): void {
+    if (!this.arrastando()) return;
+    const deltaX = evento.touches[0].clientX - this.touchStartX;
+    this.arrastoPercentual.set((deltaX / this.larguraViewport) * 100);
+  }
+
+  aoTocarFim(): void {
+    if (!this.arrastando()) return;
+    const percentual = this.arrastoPercentual();
+
+    if (percentual <= -this.limiarSwipe) {
+      this.proximo(); // já reinicia o auto-avanço internamente
+    } else if (percentual >= this.limiarSwipe) {
+      this.anterior();
+    } else {
+      this.reiniciarAutoAvanco(); // não passou do limiar: só volta pro lugar
+    }
+
+    this.arrastando.set(false);
+    this.arrastoPercentual.set(0);
+  }
+
+  deslocamento(): number {
+    return -(this.indiceAtivo() * 100) + this.arrastoPercentual();
   }
 
   irPara(indice: number): void {

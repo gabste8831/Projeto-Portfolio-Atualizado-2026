@@ -11,10 +11,12 @@
           aria-label="Categoria anterior">‹</button>
 
         <!-- 2. VIEWPORT (Janela estática que mascara o conteúdo excedente) -->
-        <div class="skills_viewport">
+        <div class="skills_viewport" #viewport (touchstart)="aoTocarInicio($event)" (touchmove)="aoTocarMover($event)"
+          (touchend)="aoTocarFim()" (touchcancel)="aoTocarFim()">
 
           <!-- 3. TRILHO (A esteira móvel que realmente desliza horizontalmente) -->
-          <div class="skills_trilho" [style.transform]="'translateX(-' + (indiceAtivo() * 100) + '%)'">
+          <div class="skills_trilho" [class.sem-transicao]="arrastando()"
+            [style.transform]="'translateX(' + deslocamento() + '%)'">
 
             <!-- Cada slide agora encapsula o Título + Seus respectivos Logotipos -->
             <div class="skills_slide" *ngFor="let grupo of grupos">

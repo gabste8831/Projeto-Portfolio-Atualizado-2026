@@ -60,54 +60,24 @@
   max-width: 34ch;
 }
 
-/* ---- Rodapé compartilhado: telefone + redes ---- */
-.contato_rodape {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding-top: 40px;
-  border-top: 1px solid var(--line-on-ink);
-}
-
-.contato_redes {
-  display: flex;
-  gap: 28px;
-}
-
-.contato_redes a {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--ink-mute);
-  border-bottom: 1px solid transparent;
-  transition: color 0.2s var(--ease-standard), border-color 0.2s var(--ease-standard);
-}
-
-.contato_redes a:hover {
-  color: var(--paper);
-  border-color: var(--paper);
-}
 
 @media (max-width: 780px) {
   .contato_caminhos {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+
   .contato_divisor {
     width: 100%;
     height: 1px;
   }
+
   .contato_caminho {
     align-items: center;
     text-align: center;
   }
+
   .contato_caminho-texto {
     max-width: none;
-  }
-  .contato_rodape {
-    flex-direction: column;
-    text-align: center;
   }
 }

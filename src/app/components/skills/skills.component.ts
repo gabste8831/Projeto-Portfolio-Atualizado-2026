@@ -3,20 +3,6 @@ import { Component, ElementRef, OnDestroy, OnInit, signal, ViewChild } from '@an
 import { HABILIDADES, SOFT_SKILLS } from '../../data/portfolio-data';
 import { RevealDirective } from '../../shared/reveal.directive';
 
-/**
- * Seção "Skills".
- *
- * As categorias de tecnologia viram um carrossel (uma categoria visível por
- * vez) em vez de uma lista empilhada — isso é o que resolve a altura da
- * seção. O carrossel avança sozinho a cada 10s; qualquer navegação manual
- * (seta ou aba) reinicia essa contagem, pra não "brigar" com o usuário.
- *
- * Cada tecnologia exibe seu logo oficial (via Simple Icons CDN, já com a
- * cor de marca), dentro do mesmo quadrado de linha fina usado no resto do
- * site - em escala de cinza por padrão, revelando a cor no hover. Itens
- * sem logo de marca (conceitos como "APIs REST" ou "UI/UX") caem no
- * fallback de monograma tipográfico.
- */
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -24,6 +10,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css',
 })
+
 export class SkillsComponent implements OnInit, OnDestroy {
   readonly grupos = HABILIDADES;
   readonly softSkills = SOFT_SKILLS;
@@ -76,11 +63,11 @@ export class SkillsComponent implements OnInit, OnDestroy {
     const percentual = this.arrastoPercentual();
 
     if (percentual <= -this.limiarSwipe) {
-      this.proximo(); // já reinicia o auto-avanço internamente
+      this.proximo();
     } else if (percentual >= this.limiarSwipe) {
       this.anterior();
     } else {
-      this.reiniciarAutoAvanco(); // não passou do limiar: só volta pro lugar
+      this.reiniciarAutoAvanco();
     }
 
     this.arrastando.set(false);
@@ -108,13 +95,11 @@ export class SkillsComponent implements OnInit, OnDestroy {
     }
   }
 
-  /** Chamado a cada interação manual, pra não avançar de novo logo em seguida */
   private reiniciarAutoAvanco(): void {
     this.pararAutoAvanco();
     this.iniciarAutoAvanco();
   }
 
-  /** Monogramas curados para as tecnologias mais citadas; o restante cai no fallback */
   private readonly monogramas: Record<string, string> = {
     'JavaScript (ES6+)': 'JS',
     'Node.js': 'N',
@@ -146,7 +131,6 @@ export class SkillsComponent implements OnInit, OnDestroy {
     'UI/UX': 'UX',
   };
 
-  /** Retorna o monograma de uma skill: usa a curadoria acima, ou cai num fallback automático */
   sigla(item: string): string {
     if (this.monogramas[item]) {
       return this.monogramas[item];
@@ -155,7 +139,6 @@ export class SkillsComponent implements OnInit, OnDestroy {
     return primeiraPalavra.slice(0, 2).toUpperCase();
   }
 
-  /** Slugs do Simple Icons (simpleicons.org) para as tecnologias com logo de marca */
   private readonly icones: Record<string, string> = {
     'JavaScript (ES6+)': 'javascript',
     'Node.js': 'nodedotjs',
@@ -183,21 +166,17 @@ export class SkillsComponent implements OnInit, OnDestroy {
     'Adobe Photoshop': 'adobephotoshop',
   };
 
-  /** Retorna a URL do ícone de marca (Simple Icons CDN) ou null se a skill não tiver um mapeado */
   iconeUrl(item: string): string | null {
     const slug = this.icones[item];
     return slug ? `https://cdn.simpleicons.org/${slug}` : null;
   }
 
-  /** Itens cujo ícone falhou ao carregar (CDN fora do ar, bloqueio de adblocker etc.) */
   private readonly iconesQuebrados = new Set<string>();
 
-  /** Chamado pelo (error) do <img>: registra a falha e força o fallback de monograma */
   aoErrarIcone(item: string): void {
     this.iconesQuebrados.add(item);
   }
 
-  /** True quando devemos mostrar o ícone de marca (existe slug e ele carregou normalmente) */
   temIcone(item: string): boolean {
     return !!this.icones[item] && !this.iconesQuebrados.has(item);
   }

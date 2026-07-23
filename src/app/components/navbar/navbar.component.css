@@ -6,7 +6,6 @@
   z-index: 50;
   background: color-mix(in srgb, var(--ink-soft) 20%, transparent);
   backdrop-filter: blur(10px);
-  /* border-bottom: 1px solid var(--line-on-ink); */
 }
 
 .navbar_inner {

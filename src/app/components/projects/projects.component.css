@@ -1,4 +1,3 @@
-/* ---- Estilo dos Cards e Elementos Base ---- */
 .projeto_card {
   display: flex;
   flex-direction: column;
@@ -79,9 +78,6 @@
   max-width: 46ch;
 }
 
-/* ==========================================================================
-   DESKTOP (> 790px): Grid 2x2 Estático
-   ========================================================================== */
 .projetos_trilho {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -96,13 +92,9 @@
 @media (min-width: 791px) {
   .projetos_trilho {
     transform: none !important;
-    /* Garante que o inline-style do carrossel não afete o Grid */
   }
 }
 
-/* ==========================================================================
-   MOBILE (< 790px): Carrossel Deslizante
-   ========================================================================== */
 @media (max-width: 790px) {
   .projetos_viewport {
     overflow: hidden;

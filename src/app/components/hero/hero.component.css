@@ -30,7 +30,6 @@
   margin-bottom: 16px;
 }
 
-/* ---- Alinhamento e Botões ---- */
 .hero_cta {
   display: flex;
   align-items: center;
@@ -43,7 +42,6 @@
   padding: 0;
 }
 
-/* Nova classe para integrar o currículo à fileira Premium */
 .hero_cta .botao--outline {
   border: 1px solid var(--line-on-ink);
   padding: 10px 22px;
@@ -61,7 +59,6 @@
   cursor: pointer;
 }
 
-/* ---- Foto com moldura deslocada ---- */
 .hero_photo-wrap {
   position: relative;
   padding: 0 28px 8px 0;
@@ -86,7 +83,6 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top center;
-  /* filter: grayscale(1) contrast(1.05) brightness(0.98); */
 }
 
 .hero_photo figcaption {

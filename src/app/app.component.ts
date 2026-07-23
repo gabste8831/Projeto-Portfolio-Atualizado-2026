@@ -8,14 +8,7 @@ import { EducationComponent } from './components/education/education.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-/**
- * Componente raiz.
- *
- * Repare que este componente não tem quase nenhuma lógica: seu único
- * trabalho é orquestrar a ordem das seções da página, cada uma isolada em
- * seu próprio componente standalone (com seu próprio HTML/CSS/TS). Essa é
- * a espinha dorsal da "árvore de componentes" do Angular.
- */
+
 @Component({
   selector: 'app-root',
   standalone: true,

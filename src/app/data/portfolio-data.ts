@@ -1,13 +1,3 @@
-/**
- * Fonte única de dados do portfólio.
- *
- * Em vez de espalhar textos soltos dentro dos templates HTML, todo o conteúdo
- * "de negócio" (currículo do Gabriel) mora aqui, tipado pelas interfaces em
- * `models/portfolio-data.model.ts`. Cada componente injeta este arquivo (ou
- * futuramente um serviço) e apenas renderiza. Isso é o mesmo princípio de
- * separar dados/ETL da camada de apresentação - algo que o próprio Gabriel
- * aplica no trabalho dele.
- */
 import {
   CursoOuCertificacao,
   ExperienciaProfissional,
@@ -40,13 +30,11 @@ export const PERFIL: PerfilPessoal = {
   ]
 };
 
-/** Texto de objetivo profissional exibido em destaque na seção "Sobre" */
 export const OBJETIVO_PROFISSIONAL =
   'Atuar como desenvolvedor, aplicando princípios de engenharia de software na criação ' +
   'de soluções, desde interfaces à estruturas de hospedagem. Busco alinhar a parte ' +
   'técnica à visão estratégica de negócio, e assim evoluir na carreira em tecnologia.';
 
-/** Fatos rápidos exibidos ao lado do objetivo, na seção "Sobre" */
 export const FATOS_RAPIDOS: FatoRapido[] = [
   { rotulo: 'localização', valor: PERFIL.localizacao },
   { rotulo: 'idade', valor: `${PERFIL.idade} anos` },
@@ -93,11 +81,6 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
   },
 ];
 
-/**
- * Projetos em destaque (com deploy) exibidos na seção "Projetos".
- * ATENÇÃO Gabriel: os 3 itens abaixo são placeholders de exemplo - troque
- * título, descrição, tecnologias e URLs pelos seus projetos reais.
- */
 export const PROJETOS: ProjetoPortfolio[] = [
   {
     titulo: 'Site TR Transportes',

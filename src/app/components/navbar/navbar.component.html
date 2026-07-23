@@ -4,7 +4,6 @@
       <img src="/logo_gabdev_2.svg" alt="Logo Gabriel Steffens" class="navbar_logo" />
     </a>
 
-    <!-- Links de navegação. O array vem do TS para não repetir markup -->
     <ul class="navbar_links">
       <li *ngFor="let link of links">
         <a [href]="link.href">{{ link.rotulo }}</a>
@@ -17,7 +16,6 @@
     </button>
   </div>
 
-  <!-- Menu mobile: aparece condicionalmente com base no signal menuAberto -->
   <ul class="navbar_mobile" *ngIf="menuAberto()">
     <li *ngFor="let link of links">
       <a [href]="link.href" (click)="menuAberto.set(false)">{{ link.rotulo }}</a>

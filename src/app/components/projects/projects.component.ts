@@ -16,7 +16,6 @@ export class ProjectsComponent {
   readonly projetos = PROJETOS;
   readonly perfil = PERFIL;
 
-  // Estado do Carrossel usando Signals
   indiceAtivo = signal(0);
   arrastando = signal(false);
   private arrastoPx = signal(0);
@@ -24,7 +23,6 @@ export class ProjectsComponent {
   private touchStartX = 0;
   private touchCurrentX = 0;
 
-  // Cálculo reativo do transform para suporte a animação e arrasto do dedo
   trilhoTransform = computed(() => {
     const basePercent = -this.indiceAtivo() * 100;
 
@@ -57,7 +55,6 @@ export class ProjectsComponent {
     }
   }
 
-  // ---- Eventos de Gestos / Touch Mobile ----
   aoTocarInicio(event: TouchEvent): void {
     if (window.innerWidth > 790) return;
     this.touchStartX = event.touches[0].clientX;
@@ -77,7 +74,7 @@ export class ProjectsComponent {
     if (!this.arrastando()) return;
 
     const deltaX = this.arrastoPx();
-    const limiteSensibilidade = 40; // Sensibilidade do swipe em pixels
+    const limiteSensibilidade = 40;
 
     if (deltaX < -limiteSensibilidade) {
       this.proximo();

@@ -19,7 +19,6 @@
   color: var(--ink-mute);
 }
 
-/* ---- Dois caminhos lado a lado, com uma divisória fina no meio ---- */
 .contato_caminhos {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -60,8 +59,6 @@
   max-width: 34ch;
 }
 
-/* ---- Faixa de redes & contato, abaixo do grid de objetivo/fatos ---- */
-/* ---- Faixa de redes & contato (Estilo Stack/Glifo) ---- */
 .sobre_redes {
   margin-top: 64px;
   padding-top: 40px;
@@ -81,7 +78,6 @@
   margin-top: 24px;
 }
 
-/* Card individual da rede */
 .sobre_rede-card {
   display: flex;
   flex-direction: column;
@@ -92,7 +88,6 @@
   text-align: center;
 }
 
-/* Glifo da rede (inspiração direta nos cards de stack/skills) */
 .sobre_rede-glifo {
   width: 52px;
   height: 52px;
@@ -112,7 +107,6 @@
   line-height: 1;
 }
 
-/* Rótulo abaixo do glifo */
 .sobre_rede-nome {
   font-size: 11px;
   font-weight: 500;
@@ -122,7 +116,6 @@
   transition: color 0.3s var(--ease-standard);
 }
 
-/* Interação de Hover */
 .sobre_rede-card:hover .sobre_rede-glifo {
   border-color: var(--paper);
   color: var(--paper);

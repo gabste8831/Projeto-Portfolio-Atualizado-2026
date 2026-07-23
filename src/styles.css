@@ -1,14 +1,4 @@
-/* ==========================================================================
-   Design tokens - v2: minimalismo editorial monocromático.
-   Paleta 100% em tons neutros (sem matiz de cor); contraste vem da tipografia:
-   um sans fino e discreto para tudo, com DM Serif Display (itálico) reservado
-   para poucas palavras de destaque, à la editorial de moda.
-   ========================================================================== */
-/* Fontes carregadas via <link> no index.html (ver <head>), não por @import
-   aqui - assim o build não depende de acesso de rede externo. */
-
 :root {
-  /* Cor - estritamente monocromática (preto, branco, cinzas) */
   --paper: #f3f3f3;
   --paper-alt: #ececec;
   --ink: #242424;
@@ -17,11 +7,9 @@
   --line: #d3d3d3;
   --line-on-ink: #363636;
 
-  /* Tipografia */
   --font-serif: 'Times New Roman', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 
-  /* Layout */
   --max-width: 1120px;
   --ease-standard: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-reveal: cubic-bezier(0.15, 0.85, 0.45, 1);
@@ -60,8 +48,6 @@ body {
   position: relative;
 }
 
-/* Grão de filme sutil sobre toda a página - referência às fotos editoriais
-   em preto e branco; é a nossa "assinatura" visual discreta */
 body::before {
   content: '';
   position: fixed;
@@ -84,8 +70,6 @@ h4 {
   line-height: 1.08;
 }
 
-/* Palavra(s) de destaque em serifa - usar com moderação, no máximo
-   uma expressão por título */
 em,
 .destaque {
   font-family: var(--font-serif);
@@ -112,7 +96,6 @@ a {
   outline-offset: 3px;
 }
 
-/* ---- Layout compartilhado ---- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -129,7 +112,6 @@ section {
   }
 }
 
-/* Seções alternam papel claro / tinta escura - sempre em tons neutros */
 .secao--clara {
   background: var(--paper);
   color: var(--ink);
@@ -172,7 +154,6 @@ section {
   max-width: 44ch;
 }
 
-/* Botões - linhas finas, sem preenchimento colorido */
 .botao {
   display: inline-flex;
   align-items: center;
@@ -228,7 +209,6 @@ section {
   opacity: 0.6;
 }
 
-/* ---- Revelação suave ao rolar ---- */
 [appReveal] {
   opacity: 0;
   transform: translateY(22px);

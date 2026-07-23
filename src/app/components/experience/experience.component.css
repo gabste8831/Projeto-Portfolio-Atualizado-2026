@@ -69,29 +69,22 @@
   font-size: 12px;
   color: var(--paper-alt);
   letter-spacing: 0.02em;
-  /* Reduzi a margem para ficar mais próximo do botão/conteúdo */
   margin-bottom: 8px;
 }
 
-/* =========================================
-   ANIMAÇÃO DO ACCORDION (CSS GRID)
-   ========================================= */
 .experiencia_destaques-wrapper {
   display: grid;
   grid-template-rows: 0fr;
-  /* Fechado por padrão */
   transition: grid-template-rows 0.6s var(--ease-standard, ease-in-out);
   overflow: hidden;
 }
 
 .experiencia_destaques-wrapper.is-open {
   grid-template-rows: 1fr;
-  /* Abre dinamicamente de acordo com o conteúdo */
 }
 
 .experiencia_destaques {
   min-height: 0;
-  /* Obrigatório para a animação do grid funcionar */
   display: grid;
   gap: 12px;
   margin: 0;
@@ -99,7 +92,6 @@
   list-style: none;
 }
 
-/* Margem interna apenas quando estiver aberto para respirar o layout */
 .experiencia_destaques-wrapper.is-open .experiencia_destaques {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -122,7 +114,6 @@
   opacity: 0.4;
 }
 
-/* Botão de Toggle */
 .experiencia_toggle {
   margin-top: 12px;
   background: none;

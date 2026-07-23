@@ -5,23 +5,18 @@
 
     <div class="skills_carrossel" appReveal>
 
-      <!-- 1. CONTAINER DA INTERFACE (Segura as setas e a janela central) -->
       <div class="skills_carrossel-interface">
         <button type="button" class="skills_seta skills_seta--esquerda" (click)="anterior()"
           aria-label="Categoria anterior">‹</button>
 
-        <!-- 2. VIEWPORT (Janela estática que mascara o conteúdo excedente) -->
         <div class="skills_viewport" #viewport (touchstart)="aoTocarInicio($event)" (touchmove)="aoTocarMover($event)"
           (touchend)="aoTocarFim()" (touchcancel)="aoTocarFim()">
 
-          <!-- 3. TRILHO (A esteira móvel que realmente desliza horizontalmente) -->
           <div class="skills_trilho" [class.sem-transicao]="arrastando()"
             [style.transform]="'translateX(' + deslocamento() + '%)'">
 
-            <!-- Cada slide agora encapsula o Título + Seus respectivos Logotipos -->
             <div class="skills_slide" *ngFor="let grupo of grupos">
 
-              <!-- O título agora faz parte do slide e desliza junto com os blocos -->
               <h3 class="skills_categoria">{{ grupo.categoria }}</h3>
 
               <div class="logotipos">
@@ -45,7 +40,6 @@
           aria-label="Próxima categoria">›</button>
       </div>
 
-      <!-- Pontos de progresso inferiores (mantidos para navegação discreta) -->
       <div class="skills_pontos">
         <button type="button" class="skills_ponto" *ngFor="let grupo of grupos; let i = index"
           [class.skills_ponto--ativo]="i === indiceAtivo()" (click)="irPara(i)"
@@ -53,7 +47,6 @@
       </div>
     </div>
 
-    <!-- Soft skills (Sem alterações) -->
     <div class="skills_soft" appReveal>
       <h3 class="skills_categoria">Engenharia &amp; gestão</h3>
       <ul class="skills_soft-itens">

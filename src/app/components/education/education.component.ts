@@ -3,11 +3,6 @@ import { Component } from '@angular/core';
 import { CURSOS, FORMACAO, PERFIL } from '../../data/portfolio-data';
 import { RevealDirective } from '../../shared/reveal.directive';
 
-
-/**
- * Seção "Formação" - graduação/ensino formal à esquerda e um grid de cursos
- * e certificações complementares à direita.
- */
 @Component({
   selector: 'app-education',
   standalone: true,

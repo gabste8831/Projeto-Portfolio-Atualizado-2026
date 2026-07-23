@@ -4,10 +4,8 @@
     <h2 class="titulo-secao" appReveal>Projetos em <em>destaque</em></h2>
 
     <div class="projetos_carrossel" appReveal>
-      <!-- Viewport que escuta os eventos de toque mobile -->
       <div class="projetos_viewport" #viewport (touchstart)="aoTocarInicio($event)" (touchmove)="aoTocarMover($event)"
         (touchend)="aoTocarFim()" (touchcancel)="aoTocarFim()">
-        <!-- Trilho: vira esteira deslizante no mobile e grid no desktop -->
         <div class="projetos_trilho" [class.sem-transicao]="arrastando()" [style.transform]="trilhoTransform()">
           <article class="projeto_card" *ngFor="let projeto of projetos">
             <div class="projeto_conteudo">
@@ -33,7 +31,6 @@
         </div>
       </div>
 
-      <!-- Indicadores de progresso (exibidos apenas em telas < 790px) -->
       <div class="projetos_pontos">
         <button type="button" class="projeto_ponto" *ngFor="let projeto of projetos; let i = index"
           [class.projeto_ponto--ativo]="i === indiceAtivo()" (click)="irPara(i)"

@@ -3,28 +3,43 @@
     <span class="rotulo" appReveal>Trabalhos</span>
     <h2 class="titulo-secao" appReveal>Projetos em <em>destaque</em></h2>
 
-    <div class="projetos_grid" appReveal>
-      <article class="projeto_card" *ngFor="let projeto of projetos">
-        <div class="projeto_conteudo">
-          <img class= "projeto_imagem" [src]="projeto.imagem" [alt]="projeto.titulo">
-          <h3 class="projeto_titulo">{{ projeto.titulo }}</h3>
-          <p class="projeto_descricao">{{ projeto.descricao }}</p>
+    <div class="projetos_carrossel" appReveal>
+      <!-- Viewport que escuta os eventos de toque mobile -->
+      <div class="projetos_viewport" #viewport (touchstart)="aoTocarInicio($event)" (touchmove)="aoTocarMover($event)"
+        (touchend)="aoTocarFim()" (touchcancel)="aoTocarFim()">
+        <!-- Trilho: vira esteira deslizante no mobile e grid no desktop -->
+        <div class="projetos_trilho" [class.sem-transicao]="arrastando()" [style.transform]="trilhoTransform()">
+          <article class="projeto_card" *ngFor="let projeto of projetos">
+            <div class="projeto_conteudo">
+              <img class="projeto_imagem" [src]="projeto.imagem" [alt]="projeto.titulo" loading="lazy">
+              <h3 class="projeto_titulo">{{ projeto.titulo }}</h3>
+              <p class="projeto_descricao">{{ projeto.descricao }}</p>
 
-          <ul class="projeto_tags">
-            <li class="projeto_tag" *ngFor="let tech of projeto.tecnologias">{{ tech }}</li>
-          </ul>
-        </div>
+              <ul class="projeto_tags">
+                <li class="projeto_tag" *ngFor="let tech of projeto.tecnologias">{{ tech }}</li>
+              </ul>
+            </div>
 
-        <div class="projeto_acoes">
-          <a class="botao botao--fantasma projeto_botao" [href]="projeto.repoUrl" target="_blank" rel="noopener">
-            Código
-          </a>
-          <a class="botao botao--link projeto_botao" *ngIf="projeto.deployUrl" [href]="projeto.deployUrl"
-            target="_blank" rel="noopener">
-            Visitar
-          </a>
+            <div class="projeto_acoes">
+              <a class="botao botao--fantasma projeto_botao" [href]="projeto.repoUrl" target="_blank" rel="noopener">
+                Código
+              </a>
+              <a class="botao botao--link projeto_botao" *ngIf="projeto.deployUrl" [href]="projeto.deployUrl"
+                target="_blank" rel="noopener">
+                Visitar
+              </a>
+            </div>
+          </article>
         </div>
-      </article>
+      </div>
+
+      <!-- Indicadores de progresso (exibidos apenas em telas < 790px) -->
+      <div class="projetos_pontos">
+        <button type="button" class="projeto_ponto" *ngFor="let projeto of projetos; let i = index"
+          [class.projeto_ponto--ativo]="i === indiceAtivo()" (click)="irPara(i)"
+          [attr.aria-label]="'Ir para o projeto ' + (i + 1)">
+        </button>
+      </div>
     </div>
 
     <div class="projetos_rodape" appReveal>

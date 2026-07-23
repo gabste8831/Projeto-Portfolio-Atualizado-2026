@@ -15,32 +15,14 @@
     </div>
 
     <!-- Faixa de redes/contato, logo abaixo do objetivo -->
+    <!-- Faixa de redes/contato estilizada estilo Stack/Glifo -->
     <div class="sobre_redes" appReveal>
       <span class="rotulo">Redes &amp; contato</span>
-      <div class="sobre_redes-links">
-        <a
-          class="sobre_rede"
-          *ngFor="let rede of redes"
-          [href]="rede.href"
-          [attr.target]="rede.externo ? '_blank' : null"
-          [attr.rel]="rede.externo ? 'noopener' : null"
-        >
-          <span class="sobre_rede-icone">
-            <img
-              *ngIf="temIconeCarregado(rede.icone)"
-              [src]="iconeUrl(rede.icone!)"
-              [alt]="rede.rotulo"
-              loading="lazy"
-              (error)="aoErrarIcone(rede.icone!)"
-            />
-            <!-- E-mail não tem logo de marca: um envelope genérico no lugar -->
-            <svg *ngIf="!rede.icone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M3 6.5C3 5.67 3.67 5 4.5 5h15c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z"
-                stroke="currentColor" stroke-width="1.5" />
-              <path d="m4 6.5 8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
+      <div class="sobre_redes-grid">
+        <a class="sobre_rede-card" *ngFor="let rede of redes" [href]="rede.href"
+          [attr.target]="rede.externo ? '_blank' : null" [attr.rel]="rede.externo ? 'noopener' : null">
+          <span class="sobre_rede-glifo">
+            <i [class]="rede.iconeClass"></i>
           </span>
           <span class="sobre_rede-nome">{{ rede.rotulo }}</span>
         </a>

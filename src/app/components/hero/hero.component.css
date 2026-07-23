@@ -112,3 +112,10 @@
     max-width: 380px;
   }
 }
+
+@media (max-width: 400px) {
+  .hero_cta .botao--outline {
+    margin-right: 100%;
+    min-width: max-content;
+  }
+}

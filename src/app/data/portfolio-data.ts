@@ -33,7 +33,6 @@ export const PERFIL: PerfilPessoal = {
   foto: '/gabriel.jpg',
   logoUrl: '/logo_gabdev_2.svg',
   curriculoUrl: '/Gabriel Steffens Currículo 2026.pdf',
-  curriculoNomeArquivo: 'Curriculo_Gabriel_Steffens.pdf',
   resumo: [
     `Prazer, Gabriel Steffens!`,
     `Sou dev full-stack, atualmente focado em arquiteturas Node.js e JavaScript pela Apresenta.me, onde atuo diretamente em processos de migração, modelagem e análise de dados.`,

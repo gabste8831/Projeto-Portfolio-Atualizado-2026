@@ -31,38 +31,6 @@ export class AboutComponent {
     { rotulo: 'atuação', valor: 'Back-end · Node.js · ETL' },
   ];
 
-  /**
-   * Redes exibidas na faixa "Redes & contato". `icone` é o slug do Simple
-   * Icons (simpleicons.org/cdn) - null pro e-mail, que não tem um logo de
-   * marca (aí o template cai no ícone de envelope genérico embutido).
-   */
-  readonly redes = [
-    {
-      rotulo: 'LinkedIn',
-      href: this.perfil.linkedin,
-      iconeClass: 'fa-brands fa-linkedin-in',
-      externo: true
-    },
-    {
-      rotulo: 'GitHub',
-      href: this.perfil.github,
-      iconeClass: 'fa-brands fa-github',
-      externo: true
-    },
-    {
-      rotulo: 'Instagram',
-      href: this.perfil.instagram,
-      iconeClass: 'fa-brands fa-instagram',
-      externo: true
-    },
-    {
-      rotulo: 'E-mail',
-      href: `mailto:${this.perfil.email}`,
-      iconeClass: 'fa-solid fa-envelope',
-      externo: false
-    },
-  ];
-
   /** Slugs cujo ícone falhou ao carregar (CDN fora do ar, adblocker etc.) */
   private readonly iconesQuebrados = new Set<string>();
 

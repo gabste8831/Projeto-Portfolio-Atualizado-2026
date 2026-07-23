@@ -2,9 +2,9 @@
   <div class="container">
     <div class="contato_intro" appReveal>
       <span class="rotulo">Contato</span>
-      <h2 class="contato_titulo">Vamos conversar sobre o próximo <br /><em>passo</em>.</h2>
+      <h2 class="contato_titulo">Vamos conversar sobre o próximo <em>passo</em>.</h2>
       <p class="paragrafo-lead contato_texto">
-        Sites, sistemas, soluções em geral <br /> Aberto tanto a projetos freelance quanto a oportunidades
+        Sites, sistemas, soluções em geral. Aberto tanto a projetos freelance quanto a oportunidades
         profissionais.
       </p>
     </div>
@@ -17,9 +17,6 @@
           Tem uma ideia, um MVP ou um sistema pra construir? Vamos juntos tirar essa ideia do papel. Vamos conversar
           sobre o escopo, prazos e orçamento.
         </p>
-        <a class="botao botao--primario" [href]="mailtoComAssunto('Projeto freelance')">
-          Falar sobre um projeto
-        </a>
       </div>
 
       <div class="contato_divisor" aria-hidden="true"></div>
@@ -31,8 +28,19 @@
           Aberto a oportunidades em Desenvolvimento / Engenharia de Software, e DevOps. Disponível para modelos CLT, PJ
           ou contrato (Remoto ou presencial em SC)."
         </p>
-        <a class="botao botao--primario" [href]="mailtoComAssunto('Oportunidade profissional')">
-          Enviar uma oportunidade
+      </div>
+    </div>
+    <!-- Faixa de redes/contato, logo abaixo do objetivo -->
+    <!-- Faixa de redes/contato estilizada estilo Stack/Glifo -->
+    <div class="sobre_redes" appReveal>
+      <span class="rotulo">Redes &amp; contato</span>
+      <div class="sobre_redes-grid">
+        <a class="sobre_rede-card" *ngFor="let rede of redes" [href]="rede.href"
+          [attr.target]="rede.externo ? '_blank' : null" [attr.rel]="rede.externo ? 'noopener' : null">
+          <span class="sobre_rede-glifo">
+            <i [class]="rede.iconeClass"></i>
+          </span>
+          <span class="sobre_rede-nome">{{ rede.rotulo }}</span>
         </a>
       </div>
     </div>

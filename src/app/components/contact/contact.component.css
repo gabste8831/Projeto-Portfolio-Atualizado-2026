@@ -60,6 +60,74 @@
   max-width: 34ch;
 }
 
+/* ---- Faixa de redes & contato, abaixo do grid de objetivo/fatos ---- */
+/* ---- Faixa de redes & contato (Estilo Stack/Glifo) ---- */
+.sobre_redes {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line-on-ink);
+}
+
+.rotulo {
+  display: flex;
+  justify-content: center;
+}
+
+.sobre_redes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Card individual da rede */
+.sobre_rede-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  width: 80px;
+  text-align: center;
+}
+
+/* Glifo da rede (inspiração direta nos cards de stack/skills) */
+.sobre_rede-glifo {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink-mute);
+  font-size: 20px;
+  color: var(--ink-mute);
+  background: transparent;
+  transition: border-color 0.3s var(--ease-standard),
+    color 0.3s var(--ease-standard),
+    transform 0.3s var(--ease-standard);
+}
+
+.sobre_rede-glifo i {
+  line-height: 1;
+}
+
+/* Rótulo abaixo do glifo */
+.sobre_rede-nome {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  transition: color 0.3s var(--ease-standard);
+}
+
+/* Interação de Hover */
+.sobre_rede-card:hover .sobre_rede-glifo {
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
 
 @media (max-width: 780px) {
   .contato_caminhos {

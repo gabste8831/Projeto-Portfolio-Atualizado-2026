@@ -7,8 +7,8 @@
       <li class="experiencia_item" *ngFor="let exp of experiencias; let i = index"
         [class.experiencia_item--atual]="exp.atual" [style.--i]="i" appReveal>
         <div class="experiencia_periodo-col">
-          <p class="experiencia_periodo">{{ exp.periodo }}</p>
           <span class="experiencia_badge" *ngIf="exp.atual">Atual</span>
+          <p class="experiencia_periodo">{{ exp.periodo }}</p>
         </div>
 
         <div class="experiencia_conteudo">

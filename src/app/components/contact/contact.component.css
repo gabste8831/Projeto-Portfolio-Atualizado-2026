@@ -121,6 +121,37 @@
   color: var(--paper);
 }
 
+.contato_email-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.contato_email-btn {
+  background: transparent;
+  border: 1px solid var(--line-on-ink);
+  padding: 14px 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: var(--ink-mute);
+  font-family: inherit;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: all 0.3s var(--ease-standard);
+}
+
+.contato_email-btn:hover {
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
+.contato_email-btn.copiado {
+  border-color: var(--paper);
+  color: var(--paper);
+  background: rgba(255, 255, 255, 0.05);
+}
 
 @media (max-width: 780px) {
   .contato_caminhos {
@@ -140,5 +171,12 @@
 
   .contato_caminho-texto {
     max-width: none;
+  }
+
+  .contato_email-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 16px;
+    font-size: 13px;
   }
 }

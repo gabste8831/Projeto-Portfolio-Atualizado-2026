@@ -14,6 +14,8 @@ export interface PerfilPessoal {
   foto: string;
   logoUrl: string;
   curriculoUrl: string;
+  /** Nome do arquivo sugerido ao baixar o currículo (atributo `download`) */
+  curriculoNomeArquivo: string;
 }
 
 export interface ExperienciaProfissional {
@@ -41,13 +43,6 @@ export interface CursoOuCertificacao {
   instituicao: string;
   periodo: string;
   descricao: string;
-}
-
-export interface NoPipeline {
-  id: string;
-  rotulo: string;
-  x: number;
-  y: number;
 }
 
 export interface FatoRapido {

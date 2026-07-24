@@ -17,6 +17,7 @@ export class ContactComponent {
   emailCopiado = signal(false);
 
   readonly redes = [
+    { rotulo: 'WhatsApp', href: this.perfil.whatsapp, iconeClass: 'fa-brands fa-whatsapp' },
     { rotulo: 'LinkedIn', href: this.perfil.linkedin, iconeClass: 'fa-brands fa-linkedin-in' },
     { rotulo: 'GitHub', href: this.perfil.github, iconeClass: 'fa-brands fa-github' },
     { rotulo: 'Instagram', href: this.perfil.instagram, iconeClass: 'fa-brands fa-instagram' },

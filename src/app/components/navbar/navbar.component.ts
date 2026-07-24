@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { PERFIL } from '../../data/portfolio-data';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +11,8 @@ import { Component, signal } from '@angular/core';
 })
 
 export class NavbarComponent {
+  readonly perfil = PERFIL;
+
   readonly links = [
     { rotulo: 'Sobre', href: '#sobre' },
     { rotulo: 'Experiência', href: '#experiencia' },

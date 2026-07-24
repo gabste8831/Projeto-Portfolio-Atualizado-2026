@@ -17,6 +17,7 @@
 .contato_texto {
   margin: 0 auto;
   color: var(--ink-mute);
+  font-size: 16px;
 }
 
 .contato_caminhos {

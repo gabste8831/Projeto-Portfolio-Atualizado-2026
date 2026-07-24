@@ -10,10 +10,6 @@
   font-weight: 300;
 }
 
-.contato_titulo em {
-  font-size: clamp(36px, 6vw, 58px);
-}
-
 .contato_texto {
   margin: 0 auto;
   color: var(--ink-mute);

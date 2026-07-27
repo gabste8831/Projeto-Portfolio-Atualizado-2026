@@ -89,7 +89,7 @@ export const PROJETOS: ProjetoPortfolio[] = [
     tecnologias: ['Next.js', 'TypeScript', 'CSS', 'React'],
     repoUrl: `${PERFIL.github}/Tr-Vicente-Landing-Page`,
     deployUrl: 'https://trvicente.com.br',
-    imagem: '/Site_TR_Transportes.png',
+    imagem: '/Site_TR_Vicente.png',
   },
   {
     titulo: 'Site Rio Clube Handebol',

@@ -84,11 +84,11 @@ export const EXPERIENCIAS: ExperienciaProfissional[] = [
 
 export const PROJETOS: ProjetoPortfolio[] = [
   {
-    titulo: 'Site TR Transportes',
+    titulo: 'Site TR Vicente',
     descricao: 'Landing page institucional para uma empresa de transporte de cargas, com informações sobre a empresa, serviços, contato e formulário de orçamento.',
     tecnologias: ['Next.js', 'TypeScript', 'CSS', 'React'],
-    repoUrl: `${PERFIL.github}/Tr-Transportes-Landing-Page`,
-    deployUrl: 'https://tr-transportes-landing-page.vercel.app',
+    repoUrl: `${PERFIL.github}/Tr-Vicente-Landing-Page`,
+    deployUrl: 'https://trvicente.com.br',
     imagem: '/Site_TR_Transportes.png',
   },
   {
